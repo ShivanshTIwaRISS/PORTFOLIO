@@ -3,691 +3,554 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Shivansh Tiwari — Full Stack Developer Portfolio</title>
-<meta name="description" content="Shivansh Tiwari — Aspiring Full-Stack Developer skilled in React.js, Node.js, Express.js, MySQL, and Python."/>
+<meta name="theme-color" content="#ece8de"/>
+<title>Shivansh Tiwari | Full-Stack Developer</title>
+<meta name="description" content="Shivansh Tiwari is a full-stack developer building web platforms, desktop software and AI systems with React, Node.js, Python and MySQL."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- Scroll Progress -->
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- Background Effects -->
-<div class="noise-overlay"></div>
-<div class="grid-bg"></div>
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-<canvas id="particles-canvas"></canvas>
-
-<!-- Mobile Nav Overlay -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#hero" class="active">Home</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<!-- NAVIGATION -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#" class="nav-brand">
-      <div class="nav-logo">ST</div>
-      <div class="nav-brand-text">
-        <h1>Shivansh Tiwari</h1>
-        <span>Full-Stack Developer</span>
-      </div>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link active" href="#hero">Home</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#skills">Skills</a>
-      <a class="nav-link" href="#experience">Experience</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </div>
-    <div class="nav-actions">
-      <a class="nav-cta ghost" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.77c-1.1-.75.09-.74.09-.74a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.95A4.66 4.66 0 0 1 6.16 7.4a4.34 4.34 0 0 1 .12-3.21s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.34 4.34 0 0 1 .12 3.21 4.66 4.66 0 0 1 1.25 3.24c0 4.62-2.81 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 0Z"/></svg>
-        GitHub
-      </a>
-      <a class="nav-cta primary" href="mailto:shivansh.tiwari2024@nst.rishihood.edu.in">Let's Talk →</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#top" class="mark" aria-label="Shivansh Tiwari, home">Shivansh Tiwari</a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#practice">Practice</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
   </div>
-</nav>
+</header>
+
+<main id="top">
 
 <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="main-container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <span class="pulse-dot"></span>
-          Open for Opportunities
-        </div>
-        <h2 class="hero-greeting">
-          Hi 👋, I'm<br/><span class="gradient-text">Shivansh Tiwari</span>
-        </h2>
-        <div class="hero-title-line">
-          I build <span class="typed-text" id="typedText">beautiful web apps</span>
-        </div>
-        <p class="hero-description">
-          Aspiring Full Stack Developer skilled in React.js, Node.js, Express.js, MySQL, and Python.
-          Passionate about building fast, accessible & beautiful user experiences.
-        </p>
-
-        <!-- Stats Row -->
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-value" data-count="400">0+</div>
-            <div class="hero-stat-label">LC Problems</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value" data-count="1400">0+</div>
-            <div class="hero-stat-label">LC Rating</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value" data-count="1000">0+</div>
-            <div class="hero-stat-label">CF Rating</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value" data-count="6">0+</div>
-            <div class="hero-stat-label">Projects</div>
-          </div>
-        </div>
-
-        <div class="hero-tags">
-          <span class="hero-tag">React.js</span>
-          <span class="hero-tag">Node.js</span>
-          <span class="hero-tag">MySQL</span>
-          <span class="hero-tag">Python</span>
-          <span class="hero-tag">TypeScript</span>
-          <span class="hero-tag">UI/UX</span>
-        </div>
-
-        <div class="hero-buttons">
-          <button class="btn-magnetic primary-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            <span class="btn-text">Let's Connect</span>
-            <span class="btn-icon">→</span>
-          </button>
-          <a class="btn-magnetic secondary-btn" href="#projects">
-            <span class="btn-text">View Projects</span>
-            <span class="btn-icon">↓</span>
-          </a>
-        </div>
-
-        <div class="hero-socials">
-          <a class="social-link" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener" title="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.77c-1.1-.75.09-.74.09-.74a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.95A4.66 4.66 0 0 1 6.16 7.4a4.34 4.34 0 0 1 .12-3.21s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.34 4.34 0 0 1 .12 3.21 4.66 4.66 0 0 1 1.25 3.24c0 4.62-2.81 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 0Z"/></svg>
-          </a>
-          <a class="social-link" href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5H9.49V9h3.4v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32ZM5.34 7.43a2.06 2.06 0 1 1 0-4.11 2.06 2.06 0 0 1 0 4.11ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0Z"/></svg>
-          </a>
-          <a class="social-link" href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener" title="LeetCode">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.283 5.283 0 0 0 .443 1.255 5.43 5.43 0 0 0 .787 1.145l3.563 3.534a5.568 5.568 0 0 0 3.93 1.556 5.45 5.45 0 0 0 2.91-.807l-.786-.89a4.373 4.373 0 0 1-2.124.56 4.422 4.422 0 0 1-3.13-1.28l-3.563-3.534a4.288 4.288 0 0 1-1.036-1.573 4.158 4.158 0 0 1-.29-1.982 4.393 4.393 0 0 1 1.062-2.46l3.854-4.126 5.406-5.788a.252.252 0 0 1 .176-.073.253.253 0 0 1 .178.074l3.7 3.89c.1.104.15.234.15.368a.524.524 0 0 1-.15.37l-5.443 5.702a.537.537 0 0 1-.376.155.525.525 0 0 1-.375-.156l-2.27-2.38a.5.5 0 0 1 0-.714l5.308-5.564-.788-.846-5.308 5.564a1.638 1.638 0 0 0 0 2.326l2.27 2.38a1.672 1.672 0 0 0 2.365 0l5.443-5.702c.326-.34.49-.773.49-1.208a1.66 1.66 0 0 0-.49-1.199l-3.7-3.89A1.376 1.376 0 0 0 13.483 0zm3.36 10.747h5.93a.697.697 0 0 1 0 1.395h-5.93a.697.697 0 0 1 0-1.395z"/></svg>
-          </a>
-          <a class="social-link" href="https://codeforces.com/profile/shivansh.tiwari0909" target="_blank" rel="noopener" title="Codeforces">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="3" width="5" height="18" fill="currentColor"/><rect x="9.5" y="7" width="5" height="14" fill="currentColor"/><rect x="17" y="11" width="5" height="10" fill="currentColor"/></svg>
-          </a>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Portfolio, 2026</p>
+        <h1>Shivansh<br/><em>Tiwari</em></h1>
+        <p class="lede">Full-stack developer. I build web platforms, desktop software and AI systems, from the interface to the database.</p>
+        <p class="sub">Currently studying Data Science at Newton School of Technology. Open to internships and freelance work, with a focus on clean architecture and products that hold up after the demo.</p>
+        <div class="hero-actions">
+          <a class="btn solid" href="#work">See the work</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="avatar-wrapper">
-          <div class="avatar-glow"></div>
-          <div class="avatar-ring"></div>
-          <div class="avatar-ring-2"></div>
-          <div class="avatar-img-container">
-            <img src="image.png" alt="Shivansh Tiwari" loading="eager"/>
+      <aside class="hero-side">
+        <div class="media portrait">
+          <img src="image.png" alt="Portrait of Shivansh Tiwari" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/>
+          <span class="label">Shivansh Tiwari</span>
+        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Delhi, India</dd></div>
+          <div><dt>Studying</dt><dd>B.Tech, Data Science</dd></div>
+          <div><dt>Status</dt><dd>Open to work</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>700+</b><span>LeetCode problems solved</span></div>
+      <div class="stat"><b>1400+</b><span>LeetCode contest rating</span></div>
+      <div class="stat"><b>1000+</b><span>Codeforces rating</span></div>
+      <div class="stat"><b>11</b><span>Projects built</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Index of work</p>
+      <h2>Selected <em>projects</em></h2>
+      <p>Every project below links to its source. Where a deployment exists, you can open a live preview without leaving this page.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects">
+      <button class="filter active" data-filter="all" role="tab">All</button>
+      <button class="filter" data-filter="ai" role="tab">AI and ML</button>
+      <button class="filter" data-filter="fullstack" role="tab">Full-stack</button>
+      <button class="filter" data-filter="desktop" role="tab">Desktop and CLI</button>
+      <button class="filter" data-filter="frontend" role="tab">Frontend</button>
+    </div>
+
+    <div class="work">
+
+      <article class="row" data-cat="ai">
+        <div class="row-no"></div>
+        <div class="media"><img src="image10.png" alt="CreditIQ interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">CreditIQ</span></div>
+        <div>
+          <p class="eyebrow row-kind">AI and ML<span class="tag-selected">Selected</span></p>
+          <h3>CreditIQ: Agentic Risk Intelligence Platform</h3>
+          <p class="desc">A GenAI-powered credit risk platform that scores applicants and produces explainable risk assessments through an agentic workflow. Deployed on Streamlit.</p>
+          <p class="stack">Python, GenAI, Machine Learning, Streamlit</p>
+        </div>
+        <div class="row-actions">
+          <!-- When you have the Streamlit URL, add these two buttons:
+          <button class="btn solid" data-preview="YOUR_STREAMLIT_URL" data-title="CreditIQ">Live preview</button>
+          <a class="btn" href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener">Open site</a> -->
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Credit_Score_Capstone_Project_GenAI" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="ai fullstack">
+        <div class="row-no"></div>
+        <div class="media"><img src="image12.png" alt="Parivahan Sahayak interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Parivahan Sahayak</span></div>
+        <div>
+          <p class="eyebrow row-kind">AI application<span class="tag-selected">Selected</span></p>
+          <h3>Parivahan Sahayak</h3>
+          <p class="desc">An AI assistant for transport and vehicle-related queries, giving quick conversational guidance through a clean web interface.</p>
+          <p class="stack">AI, Web app, Vercel</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://parivahansahayak-hu4o8umpp-shivanshtiwariss-projects.vercel.app/" data-title="Parivahan Sahayak">Live preview</button>
+          <a class="btn" href="https://parivahansahayak-hu4o8umpp-shivanshtiwariss-projects.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Parivahan_Sahayak" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="desktop">
+        <div class="row-no"></div>
+        <div class="media"><img src="image8.png" alt="VEYRA interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">VEYRA</span></div>
+        <div>
+          <p class="eyebrow row-kind">Desktop application</p>
+          <h3>VEYRA: Athena Examination and Proctoring Platform</h3>
+          <p class="desc">An Electron desktop application for running secure online examinations, with a controlled exam environment and proctoring support.</p>
+          <p class="stack">Electron, JavaScript, Desktop</p>
+        </div>
+        <div class="row-actions">
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Athena_clone_AD" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="fullstack">
+        <div class="row-no"></div>
+        <div class="media"><img src="image11.png" alt="meetO interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">meetO</span></div>
+        <div>
+          <p class="eyebrow row-kind">System design</p>
+          <h3>meetO: Social Media Platform</h3>
+          <p class="desc">A full-stack social platform built from the ground up around system design principles, OOP concepts, design patterns and SOLID principles.</p>
+          <p class="stack">System design, OOP, Design patterns, SOLID</p>
+        </div>
+        <div class="row-actions">
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/meetO" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="desktop">
+        <div class="row-no"></div>
+        <div class="media"><img src="image9.png" alt="CLI Music Player in a terminal" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">CLI Music Player</span></div>
+        <div>
+          <p class="eyebrow row-kind">Terminal application</p>
+          <h3>CLI Music Player</h3>
+          <p class="desc">A keyboard-driven music player that runs entirely in the terminal, with playback controls and library navigation.</p>
+          <p class="stack">CLI, Terminal UI, Systems</p>
+        </div>
+        <div class="row-actions">
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/AD-E" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="fullstack">
+        <div class="row-no"></div>
+        <div class="media"><img src="image6.png" alt="MediConnect interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">MediConnect</span></div>
+        <div>
+          <p class="eyebrow row-kind">Full-stack web</p>
+          <h3>MediConnect: Medical Management Platform</h3>
+          <p class="desc">A MERN healthcare platform for online consultations and appointment scheduling between patients and doctors.</p>
+          <p class="stack">React, Node.js, Express, MongoDB</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://medi-connect-six-psi.vercel.app/" data-title="MediConnect">Live preview</button>
+          <a class="btn" href="https://medi-connect-six-psi.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="fullstack">
+        <div class="row-no"></div>
+        <div class="media"><img src="image7.png" alt="OS e-commerce interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">OS Commerce</span></div>
+        <div>
+          <p class="eyebrow row-kind">Full-stack web</p>
+          <h3>OS: E-Commerce Platform</h3>
+          <p class="desc">A scalable e-commerce architecture with a dynamic catalog, multi-category filtering and optimized search across 500+ products.</p>
+          <p class="stack">React, Node.js, Express, MongoDB</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://caps-003.vercel.app/" data-title="OS E-Commerce">Live preview</button>
+          <a class="btn" href="https://caps-003.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="fullstack">
+        <div class="row-no"></div>
+        <div class="media"><img src="image3.png" alt="Pixnet interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Pixnet</span></div>
+        <div>
+          <p class="eyebrow row-kind">Full-stack web</p>
+          <h3>Pixnet: Social Media Platform</h3>
+          <p class="desc">Reels, stories and a trending feed, built on a React frontend with Node.js APIs.</p>
+          <p class="stack">React, Node.js, Express, MongoDB</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://pixnet-social-lu8v.vercel.app/" data-title="Pixnet">Live preview</button>
+          <a class="btn" href="https://pixnet-social-lu8v.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="frontend">
+        <div class="row-no"></div>
+        <div class="media"><img src="image2.png" alt="Online Storefront interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Online Storefront</span></div>
+        <div>
+          <p class="eyebrow row-kind">Frontend</p>
+          <h3>Online Storefront</h3>
+          <p class="desc">A responsive storefront with a smooth cart and checkout flow.</p>
+          <p class="stack">React, CSS, REST API</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://capstone-sem-2-rdkg.vercel.app/" data-title="Online Storefront">Live preview</button>
+          <a class="btn" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="frontend">
+        <div class="row-no"></div>
+        <div class="media"><img src="image4.png" alt="TaskMate interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">TaskMate</span></div>
+        <div>
+          <p class="eyebrow row-kind">Frontend</p>
+          <h3>TaskMate: Task Manager</h3>
+          <p class="desc">A task manager with search, full CRUD, persistence, loading states and an accessible interface.</p>
+          <p class="stack">React, LocalStorage, CSS</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://making-one.vercel.app/" data-title="TaskMate">Live preview</button>
+          <a class="btn" href="https://making-one.vercel.app/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="row" data-cat="frontend">
+        <div class="row-no"></div>
+        <div class="media"><img src="image5.png" alt="Quiz Game interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">The Quiz Game</span></div>
+        <div>
+          <p class="eyebrow row-kind">Frontend</p>
+          <h3>The Quiz Game</h3>
+          <p class="desc">An interactive quiz game with score tracking, written in plain HTML, CSS and JavaScript.</p>
+          <p class="stack">HTML, CSS, JavaScript</p>
+        </div>
+        <div class="row-actions">
+          <button class="btn solid" data-preview="https://shivanshtiwariss.github.io/MY-QUIZ/" data-title="The Quiz Game">Live preview</button>
+          <a class="btn" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank" rel="noopener">Open site</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section" id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Toolkit</p>
+      <h2>What I <em>work with</em></h2>
+    </div>
+    <dl class="ledger">
+      <div class="ledger-row"><dt>Languages</dt><dd>JavaScript, TypeScript, Python, SQL, HTML, CSS</dd></div>
+      <div class="ledger-row"><dt>Frontend</dt><dd>React.js, responsive layout, accessible interfaces</dd></div>
+      <div class="ledger-row"><dt>Backend</dt><dd>Node.js, Express.js, REST API design</dd></div>
+      <div class="ledger-row"><dt>Data</dt><dd>MySQL, MongoDB</dd></div>
+      <div class="ledger-row"><dt>AI and ML</dt><dd>Generative AI, agentic workflows, machine learning fundamentals, Streamlit</dd></div>
+      <div class="ledger-row"><dt>Desktop and CLI</dt><dd>Electron, terminal interfaces</dd></div>
+      <div class="ledger-row"><dt>Engineering</dt><dd>Data structures and algorithms, system design, OOP, design patterns, SOLID, Git and GitHub</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section" id="practice">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Community and problem solving</p>
+      <h2>Open source and <em>contests</em></h2>
+    </div>
+    <div class="split">
+      <article>
+        <p class="eyebrow">Open source</p>
+        <div class="big">Pull request merged</div>
+        <p class="copy">I contributed code to an open-source project and had the pull request reviewed and merged by the maintainers. It meant working through code review, following project conventions and collaborating over Git.</p>
+        <!-- Replace the paragraph above with the project name and what you changed, and set the link below to your merged PR. -->
+        <div class="links"><a class="btn" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">View contributions</a></div>
+      </article>
+      <article>
+        <p class="eyebrow">Competitive programming</p>
+        <div class="big">700+ solved</div>
+        <div class="mini">
+          <div><b>1400+</b><span>LeetCode rating</span></div>
+          <div><b>1000+</b><span>Codeforces rating</span></div>
+        </div>
+        <p class="copy">Steady practice across data structures and algorithms, with regular contest participation on both platforms.</p>
+        <div class="links">
+          <a class="btn" href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">LeetCode</a>
+          <a class="btn" href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">Codeforces</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section class="section" id="background">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Background</p>
+      <h2>Experience and <em>education</em></h2>
+    </div>
+    <div class="two">
+      <div>
+        <h3>Experience</h3>
+        <div class="log">
+          <div class="log-row">
+            <p class="log-date">May 2025 to Jul 2025</p>
+            <div><h4>Full Stack Developer Intern, Deltecs InfoTech</h4><p>Built and optimized web modules with React and Node.js, cut load time by roughly 20%, and designed RESTful APIs backed by MySQL.</p></div>
           </div>
-          <div class="floating-badge fb-1">⚡ 400+ LC Problems</div>
-          <div class="floating-badge fb-2">🎯 1000+ CF Rating</div>
-          <div class="floating-badge fb-3">🚀 DSA & CP</div>
+          <div class="log-row">
+            <p class="log-date">2024 to present</p>
+            <div><h4>Freelance Frontend Developer</h4><p>Interface polish, single-page application builds and third-party API integrations for small clients and college projects.</p></div>
+          </div>
+          <div class="log-row">
+            <p class="log-date">Ongoing</p>
+            <div><h4>Hackathons and open source</h4><p>Participant in Smart India Hackathon and HackaPirate, plus a merged pull request in an open-source project.</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <div class="log">
+          <div class="log-row">
+            <p class="log-date">2024 to 2028, ongoing</p>
+            <div><h4>B.Tech, Data Science, Newton School of Technology</h4><p>Coursework in data structures, machine learning fundamentals, databases and software engineering practice.</p></div>
+          </div>
+          <div class="log-row">
+            <p class="log-date">2022 to 2023</p>
+            <div><h4>Intermediate (XII), Swami Harsewanand Public School</h4></div>
+          </div>
+          <div class="log-row">
+            <p class="log-date">2020 to 2021</p>
+            <div><h4>Matriculation (X), Swami Harsewanand Public School</h4></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="section-wrapper" id="projects">
-  <div class="main-container">
-    <div class="section-header reveal">
-      <div class="section-label">// Portfolio</div>
-      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      <p class="section-subtitle">A curated selection of my best work — live demos & source code included.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="projects-grid">
-      <article class="project-card reveal stagger-1">
-        <div class="project-card-image">
-          <img src="image6.png" alt="MediConnect"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://medi-connect-six-psi.vercel.app/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">MediConnect: End-to-End Medical Management Web</h3>
-          <p class="project-card-desc">Developed a Full-Stack Healthcare Platform using the MERN stack to facilitate seamless online consultations and appointment scheduling between patients and doctors.</p>
-          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://medi-connect-six-psi.vercel.app/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card reveal stagger-2">
-        <div class="project-card-image">
-          <img src="image7.png" alt="OS E-Commerce Platform"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://caps-003.vercel.app/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">OS – Full-Stack E-Commerce Platform</h3>
-          <p class="project-card-desc">Developed a Scalable E-commerce Architecture using React.js and Node.js, featuring a dynamic product catalog, multi-category filtering, and optimized search functionality for 500+ products.</p>
-          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://caps-003.vercel.app/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card reveal stagger-3">
-        <div class="project-card-image">
-          <img src="image3.png" alt="Pixnet Social Media Platform"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://pixnet-social-lu8v.vercel.app/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">Pixnet — Social Media Platform</h3>
-          <p class="project-card-desc">Reels, Stories, trending feed, and a polished UI—built with React for the frontend and Node for APIs.</p>
-          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://pixnet-social-lu8v.vercel.app/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card reveal stagger-4">
-        <div class="project-card-image">
-          <img src="image2.png" alt="Online Storefront"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://capstone-sem-2.vercel.app/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">Online Storefront</h3>
-          <p class="project-card-desc">Responsive storefront with smooth cart & checkout experience and polished responsive UI.</p>
-          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">CSS</span><span class="project-tag">REST API</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card reveal stagger-5">
-        <div class="project-card-image">
-          <img src="image5.png" alt="Quiz Game"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">The Quiz Game</h3>
-          <p class="project-card-desc">A fun and interactive quiz game built with HTML, CSS, and JavaScript featuring score tracking.</p>
-          <div class="project-card-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card reveal stagger-6">
-        <div class="project-card-image">
-          <img src="image4.png" alt="TaskMate"/>
-          <div class="project-card-overlay"><a class="project-btn live" href="https://making-one.vercel.app/" target="_blank">View Live ↗</a></div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">TaskMate — Smart Task Manager</h3>
-          <p class="project-card-desc">Beautiful task manager built with React. Features: search, CRUD, persistence, smooth loaders, and accessible UI.</p>
-          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">LocalStorage</span><span class="project-tag">CSS Animations</span></div>
-          <div class="project-card-actions">
-            <a class="project-btn live" href="https://making-one.vercel.app/" target="_blank">Live Demo ↗</a>
-            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section-wrapper" id="skills">
-  <div class="main-container">
-    <div class="section-header reveal">
-      <div class="section-label">// Tech Stack</div>
-      <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
-      <p class="section-subtitle">Technologies I use to bring ideas to life.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="skills-container">
-      <div class="skill-card reveal stagger-1">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
-        <div class="skill-name">React.js</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="92"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-2">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
-        <div class="skill-name">Node.js</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="84"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-3">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-        <div class="skill-name">JavaScript</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="90"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-4">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
-        <div class="skill-name">MySQL</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="80"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-1">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
-        <div class="skill-name">Python</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="75"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-2">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>
-        <div class="skill-name">TypeScript</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="65"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-3">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>
-        <div class="skill-name">HTML5</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="95"></div></div>
-      </div>
-      <div class="skill-card reveal stagger-4">
-        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/>
-        <div class="skill-name">CSS3</div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-target="90"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE & EDUCATION -->
-<section class="section-wrapper" id="experience">
-  <div class="main-container">
-    <div class="section-header reveal">
-      <div class="section-label">// Journey</div>
-      <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
-      <p class="section-subtitle">My professional journey and academic background.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="timeline-grid">
-      <div class="timeline-block reveal-left">
-        <div class="timeline-block-title">💼 Experience</div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Full Stack Developer Intern — Deltecs InfoTech</h4><div class="timeline-date">May 2025 — Jul 2025</div><p>Built & optimized web modules with React & Node. Improved load time by ~20% and designed RESTful APIs with MySQL.</p></div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Freelance Frontend Developer</h4><div class="timeline-date">2024 — Present</div><p>UI polish, SPA builds, and integrating third-party APIs for small clients & college projects.</p></div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Hackathons & Open Source</h4><div class="timeline-date">Ongoing</div><p>Participated in Smart India Hackathon, HackaPirate. Contributed to open-source UI components.</p></div>
-      </div>
-      <div class="timeline-block reveal-right">
-        <div class="timeline-block-title">🎓 Education</div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>B.Tech (Data Science) — Newton School of Technology</h4><div class="timeline-date">2024 — 2028 (Pursuing)</div><p>Coursework in data structures, ML fundamentals, databases, and software engineering practices.</p></div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Intermediate (XII) — Swami Harsewanand Public School</h4><div class="timeline-date">2022 — 2023</div></div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Matriculation (X) — Swami Harsewanand Public School</h4><div class="timeline-date">2020 — 2021</div></div>
-        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Competitive Programming</h4><div class="timeline-date">Ongoing</div><p>Active on LeetCode & Codeforces, 200+ problems solved, contest participant.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- CONTACT -->
-<section class="section-wrapper" id="contact">
-  <div class="main-container">
-    <div class="section-header reveal">
-      <div class="section-label">// Connect</div>
-      <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
-      <p class="section-subtitle">Have a project in mind? Let's build something extraordinary.</p>
-      <div class="section-divider"></div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let us build <em>something</em> together.</h2>
+        <p class="copy">If you have an internship, a freelance project or a product that needs a developer, write to me. I reply to every message.</p>
+        <a class="mail" href="mailto:shivanshtiwari630692@gmail.com">shivanshtiwari630692@gmail.com</a>
+        <dl class="contact-list">
+          <div><dt>Location</dt><dd>Delhi, India</dd></div>
+          <div><dt>Availability</dt><dd>Internships and freelance</dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">ShivanshTIwaRISS</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener">shivansh-tiwari</a></dd></div>
+          <div><dt>LeetCode</dt><dd><a href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">TourCoder0905</a></dd></div>
+          <div><dt>Codeforces</dt><dd><a href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">shivanshtiwari630692</a></dd></div>
+        </dl>
+      </div>
+
+      <form id="contactForm" action="https://formsubmit.co/shivanshtiwari630692@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New portfolio message"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="hidden" name="_template" value="table"/>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+        <div class="two-fields">
+          <div class="field"><label for="name">Name</label><input class="input" id="name" name="name" placeholder="Your name" required/></div>
+          <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" rows="6" placeholder="What are you working on?" required></textarea></div>
+        <button class="send" id="sendBtn" type="submit">Send message</button>
+        <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="fine">By sending this form you agree to the <button type="button" data-open="privacy">Privacy Policy</button> and <button type="button" data-open="terms">Terms of Use</button>.</p>
+      </form>
     </div>
-    <div class="contact-layout">
-      <div class="contact-info reveal-left">
-        <h3>Get in Touch</h3>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-        <div class="contact-detail">
-          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="contact-detail-label">Email</div><div class="contact-detail-value">shivanshtiwari630692@gmail.com</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="contact-detail-label">Location</div><div class="contact-detail-value">Delhi, India</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><div class="contact-detail-label">Availability</div><div class="contact-detail-value">Open for Internships & Freelance</div></div>
-        </div>
-      </div>
-      <div class="contact-form-wrapper reveal-right">
-        <form id="contactForm" action="https://formsubmit.co/shivanshtiwari630692@gmail.com" method="POST">
-          <!-- Formsubmit.co config: no captcha, nice template, spam honeypot -->
-          <input type="hidden" name="_subject" value="🚀 New Portfolio Contact!">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
-          <div class="form-row">
-            <div class="form-group"><label for="name">Your Name</label><input class="form-input" id="name" name="name" placeholder="Your name" required/></div>
-            <div class="form-group"><label for="email">Your Email</label><input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
-          </div>
-          <div class="form-group"><label for="message">Message</label><textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea></div>
-          <button class="submit-btn" id="submitBtn" type="submit"><span>Send Message →</span></button>
-          <div id="formStatus" class="form-status"></div>
-        </form>
-      </div>
+  </div>
+
+  <div class="foot">
+    <div class="wrap foot-in">
+      <span>&copy; <span id="year">2026</span> Shivansh Tiwari</span>
+      <nav aria-label="Footer">
+        <button type="button" data-open="privacy">Privacy</button>
+        <button type="button" data-open="terms">Terms</button>
+        <a href="#top">Back to top</a>
+      </nav>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="main-container">
-    <p class="footer-text">© 2026 Shivansh Tiwari — Built with <span class="heart">♥</span> and lots of ☕</p>
+<!-- LIVE PREVIEW -->
+<dialog id="preview" aria-label="Live project preview">
+  <div class="dlg-head">
+    <h3 id="previewTitle">Preview</h3>
+    <div class="acts">
+      <a class="btn" id="previewOpen" href="#" target="_blank" rel="noopener">Open in new tab</a>
+      <button class="btn solid" type="button" data-close>Close</button>
+    </div>
   </div>
-</footer>
+  <div class="frame-wrap" id="frameWrap"><iframe id="previewFrame" title="Live project preview" loading="lazy"></iframe></div>
+  <p class="dlg-note">This is the deployed site, loaded live. If the preview stays blank, the site may block embedding, so use Open in new tab.</p>
+</dialog>
 
-<!-- SCRIPTS -->
+<!-- PRIVACY -->
+<dialog id="privacy" class="legal" aria-label="Privacy Policy">
+  <div class="dlg-head"><h3>Privacy Policy</h3><button class="btn solid" type="button" data-close>Close</button></div>
+  <div class="legal-body">
+    <h4>What I collect</h4>
+    <p>The contact form collects the name, email address and message you type in. Nothing else is collected through this site.</p>
+    <h4>How it is used</h4>
+    <p>Your details are used only to read and reply to your message. They are delivered to my email inbox through the Formsubmit service and are not sold or shared for marketing.</p>
+    <h4>Cookies and analytics</h4>
+    <p>This site sets no cookies of its own and runs no analytics or advertising trackers.</p>
+    <h4>Third parties</h4>
+    <p>Fonts are loaded from Google Fonts. Live previews load the deployed projects, and those sites, along with GitHub, LeetCode, Codeforces and LinkedIn, have their own policies.</p>
+    <h4>Your choices</h4>
+    <p>To have a message you sent deleted, email me at shivanshtiwari630692@gmail.com and I will remove it.</p>
+  </div>
+</dialog>
+
+<!-- TERMS -->
+<dialog id="terms" class="legal" aria-label="Terms of Use">
+  <div class="dlg-head"><h3>Terms of Use</h3><button class="btn solid" type="button" data-close>Close</button></div>
+  <div class="legal-body">
+    <h4>Content</h4>
+    <p>The text, design and layout of this portfolio are my own work. Please do not republish them as yours without permission.</p>
+    <h4>Project code</h4>
+    <p>Source code linked from this site is governed by the license in each repository. Where no license is stated, all rights are reserved.</p>
+    <h4>Live demos</h4>
+    <p>Demo projects are provided as samples of my work, as is, without warranty. Please do not enter real personal, medical or financial data into them.</p>
+    <h4>External links</h4>
+    <p>I do not control the third-party sites linked here and am not responsible for their content.</p>
+    <h4>Contact</h4>
+    <p>Questions about these terms can be sent to shivanshtiwari630692@gmail.com.</p>
+  </div>
+</dialog>
+
 <script>
-/* ==========================================
-   CUSTOM CURSOR
-   ========================================== */
-(function(){
-  const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
-  if(!dot||!ring)return;
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx-4+'px';dot.style.top=my-4+'px'});
-  (function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx-20+'px';ring.style.top=ry-20+'px';requestAnimationFrame(loop)})();
-  document.querySelectorAll('a,button,.project-card,.skill-card,.social-link,.nav-cta,.btn-magnetic,.hamburger').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{ring.classList.add('hover');dot.style.transform='scale(1.5)'});
-    el.addEventListener('mouseleave',()=>{ring.classList.remove('hover');dot.style.transform='scale(1)'});
-  });
-})();
+(function () {
+  'use strict';
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-/* ==========================================
-   SCROLL PROGRESS
-   ========================================== */
-(function(){
-  const bar=document.getElementById('scrollProgress');
-  if(!bar)return;
-  window.addEventListener('scroll',()=>{
-    const p=document.documentElement.scrollTop/(document.documentElement.scrollHeight-document.documentElement.clientHeight);
-    bar.style.transform=`scaleX(${p})`;
-  },{passive:true});
-})();
+  $('#year').textContent = new Date().getFullYear();
 
-/* ==========================================
-   NAV SCROLL EFFECT
-   ========================================== */
-(function(){
-  const nav=document.getElementById('navbar');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50),{passive:true});
-})();
-
-/* ==========================================
-   MOBILE NAV MENU
-   ========================================== */
-(function(){
-  const hamburger=document.getElementById('hamburger');
-  const mobileNav=document.getElementById('mobileNav');
-  if(!hamburger||!mobileNav)return;
-  let isOpen=false;
-  hamburger.addEventListener('click',()=>{
-    isOpen=!isOpen;
-    hamburger.classList.toggle('active',isOpen);
-    mobileNav.classList.toggle('open',isOpen);
-    document.body.style.overflow=isOpen?'hidden':'';
-  });
-  mobileNav.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click',()=>{
-      isOpen=false;
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('open');
-      document.body.style.overflow='';
-    });
-  });
-})();
-
-/* ==========================================
-   TYPED TEXT
-   ========================================== */
-(function(){
-  const el=document.getElementById('typedText');if(!el)return;
-  const phrases=["beautiful web apps","React & Node projects","fast & accessible UIs","clean, scalable code","pixel-perfect designs"];
-  let pi=0,ci=0,del=false;
-  (function type(){
-    const c=phrases[pi];
-    del?ci--:ci++;
-    el.textContent=c.substring(0,ci);
-    let s=del?30:60+Math.random()*40;
-    if(!del&&ci===c.length){s=2000;del=true}else if(del&&ci===0){del=false;pi=(pi+1)%phrases.length;s=500}
-    setTimeout(type,s);
-  })();
-})();
-
-/* ==========================================
-   COUNTER ANIMATION (Hero Stats)
-   ========================================== */
-(function(){
-  const stats=document.querySelectorAll('.hero-stat-value[data-count]');
-  let animated=false;
-  function animateCounters(){
-    if(animated)return;animated=true;
-    stats.forEach(el=>{
-      const target=parseInt(el.getAttribute('data-count'));
-      const duration=1800;
-      const start=performance.now();
-      function update(now){
-        const elapsed=now-start;
-        const progress=Math.min(elapsed/duration,1);
-        const eased=1-Math.pow(1-progress,3); // easeOutCubic
-        const current=Math.round(eased*target);
-        el.textContent=current+'+';
-        if(progress<1)requestAnimationFrame(update);
-      }
-      requestAnimationFrame(update);
-    });
-  }
-  // Trigger after hero animations complete
-  setTimeout(animateCounters,1200);
-})();
-
-/* ==========================================
-   SCROLL REVEAL
-   ========================================== */
-(function(){
-  const els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-  els.forEach(e=>obs.observe(e));
-})();
-
-/* ==========================================
-   SKILL BARS
-   ========================================== */
-(function(){
-  const fills=document.querySelectorAll('.skill-bar-fill');
-  const sec=document.getElementById('skills');if(!sec)return;
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){fills.forEach(f=>f.style.width=f.getAttribute('data-target')+'%');obs.disconnect()}});
-  },{threshold:.25});
-  obs.observe(sec);
-})();
-
-/* ==========================================
-   3D TILT CARDS
-   ========================================== */
-(function(){
-  document.querySelectorAll('.project-card').forEach(card=>{
-    card.addEventListener('mousemove',e=>{
-      const r=card.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width;
-      const y=(e.clientY-r.top)/r.height;
-      card.style.transform=`perspective(1000px) rotateX(${(y-.5)*-8}deg) rotateY(${(x-.5)*8}deg) translateY(-8px)`;
-    });
-    card.addEventListener('mouseleave',()=>card.style.transform='');
-  });
-})();
-
-/* ==========================================
-   MAGNETIC BUTTONS
-   ========================================== */
-(function(){
-  document.querySelectorAll('.btn-magnetic,.social-link,.nav-logo').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-      const r=btn.getBoundingClientRect();
-      const x=e.clientX-r.left-r.width/2;
-      const y=e.clientY-r.top-r.height/2;
-      btn.style.transform=`translate(${x*.2}px,${y*.2}px)`;
-    });
-    btn.addEventListener('mouseleave',()=>btn.style.transform='');
-  });
-})();
-
-/* ==========================================
-   NAV ACTIVE STATE
-   ========================================== */
-(function(){
-  const links=[...document.querySelectorAll('.nav-link'),...document.querySelectorAll('.mobile-nav a')];
-  const pairs=[];
-  document.querySelectorAll('.nav-link').forEach(l=>{const s=document.querySelector(l.getAttribute('href'));if(s)pairs.push({href:l.getAttribute('href'),section:s})});
-  window.addEventListener('scroll',()=>{
-    const y=window.scrollY+200;
-    for(let i=pairs.length-1;i>=0;i--){
-      if(y>=pairs[i].section.offsetTop){
-        links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===pairs[i].href));
-        break;
-      }
+  /* Images that finished loading before the handlers ran */
+  $$('.media img').forEach(function (img) {
+    if (img.complete) {
+      img.parentNode.classList.add(img.naturalWidth > 0 ? 'loaded' : 'failed');
     }
-  },{passive:true});
-})();
+  });
 
-/* ==========================================
-   PARTICLES
-   ========================================== */
-(function(){
-  const c=document.getElementById('particles-canvas');if(!c)return;
-  const ctx=c.getContext('2d');let W,H;
-  function resize(){W=c.width=innerWidth;H=c.height=innerHeight}resize();addEventListener('resize',resize);
-  const N=Math.min(70,Math.floor(innerWidth*innerHeight/20000)),ps=[];
-  class P{
-    constructor(){this.i()}
-    i(){this.x=Math.random()*W;this.y=Math.random()*H;this.s=Math.random()*2+.5;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.o=Math.random()*.25+.05;this.h=Math.random()*60+250}
-    u(){this.x+=this.vx;this.y+=this.vy;if(this.x<-20||this.x>W+20||this.y<-20||this.y>H+20)this.i()}
-    d(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},70%,70%,${this.o})`;ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.s*4,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},70%,70%,${this.o*.12})`;ctx.fill()}
+  /* Mobile menu */
+  var menuBtn = $('#menuBtn'), nav = $('#nav');
+  menuBtn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  $$('a', nav).forEach(function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = 'Menu';
+    });
+  });
+
+  /* Active section in nav */
+  var links = $$('.nav a');
+  var targets = links.map(function (l) { return $(l.getAttribute('href')); });
+  function setActive() {
+    var y = window.scrollY + 140, cur = -1;
+    targets.forEach(function (t, i) { if (t && t.offsetTop <= y) cur = i; });
+    links.forEach(function (l, i) { l.classList.toggle('active', i === cur); });
   }
-  for(let i=0;i<N;i++)ps.push(new P);
-  (function loop(){
-    ctx.clearRect(0,0,W,H);
-    ps.forEach(p=>{p.u();p.d()});
-    for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){
-      const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<120){ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(168,85,247,${.05*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke()}
-    }
-    requestAnimationFrame(loop);
-  })();
-})();
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
 
-/* ==========================================
-   SMOOTH SCROLL
-   ========================================== */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',function(e){
-    e.preventDefault();
-    const t=document.querySelector(this.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  /* Project filters */
+  var filters = $$('.filter'), rows = $$('.row');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-filter');
+      filters.forEach(function (b) { b.classList.toggle('active', b === btn); });
+      rows.forEach(function (r) {
+        var cats = (r.getAttribute('data-cat') || '').split(' ');
+        r.classList.toggle('is-hidden', f !== 'all' && cats.indexOf(f) === -1);
+      });
+    });
   });
-});
 
-/* ==========================================
-   PARALLAX BADGES
-   ========================================== */
-(function(){
-  const badges=document.querySelectorAll('.floating-badge');
-  window.addEventListener('mousemove',e=>{
-    const x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;
-    badges.forEach((b,i)=>{const n=(i+1)*8;b.style.transform=`translate(${x*n}px,${y*n}px)`});
+  /* Live preview dialog */
+  var preview = $('#preview'), frame = $('#previewFrame'), wrap = $('#frameWrap');
+  frame.addEventListener('load', function () { if (frame.src && frame.src !== 'about:blank') wrap.classList.add('ready'); });
+  $$('[data-preview]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var url = b.getAttribute('data-preview');
+      $('#previewTitle').textContent = b.getAttribute('data-title') || 'Preview';
+      $('#previewOpen').href = url;
+      wrap.classList.remove('ready');
+      frame.src = url;
+      preview.showModal();
+    });
   });
-})();
+  preview.addEventListener('close', function () { frame.src = 'about:blank'; wrap.classList.remove('ready'); });
 
-/* ==========================================
-   CONTACT FORM (AJAX via Formsubmit.co)
-   ========================================== */
-(function(){
-  const form=document.getElementById('contactForm');
-  const btn=document.getElementById('submitBtn');
-  const status=document.getElementById('formStatus');
-  if(!form)return;
+  /* Generic dialogs (privacy, terms) */
+  $$('[data-open]').forEach(function (b) {
+    b.addEventListener('click', function () { $('#' + b.getAttribute('data-open')).showModal(); });
+  });
+  $$('dialog').forEach(function (d) {
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    $$('[data-close]', d).forEach(function (c) { c.addEventListener('click', function () { d.close(); }); });
+  });
 
-  form.addEventListener('submit',function(e){
+  /* Contact form */
+  var form = $('#contactForm'), send = $('#sendBtn'), status = $('#formStatus');
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const name=document.getElementById('name').value.trim();
-    const email=document.getElementById('email').value.trim();
-    const message=document.getElementById('message').value.trim();
-    if(!name||!email||!message)return;
-
-    // Show loading state
-    btn.disabled=true;
-    btn.querySelector('span').textContent='Sending...';
-    btn.style.opacity='0.5';
-    status.textContent='';
-    status.className='form-status';
-
-    const formData=new FormData(form);
-
-    fetch(form.action,{
-      method:'POST',
-      body:formData,
-      headers:{'Accept':'application/json'}
-    }).then(response=>{
-      if(response.ok){
-        status.textContent='✅ Message sent successfully! I\'ll get back to you soon.';
-        status.className='form-status success';
+    send.disabled = true; send.textContent = 'Sending';
+    status.className = 'status'; status.textContent = '';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error('failed');
+        status.textContent = 'Message sent. I will reply soon.';
+        status.className = 'status ok';
         form.reset();
-      } else {
-        throw new Error('Form failed');
-      }
-    }).catch(error=>{
-      status.textContent='❌ Failed to send message (Make sure you are running via local server/localhost, not file://).';
-      status.className='form-status error';
-    }).finally(()=>{
-      btn.disabled=false;
-      btn.querySelector('span').textContent='Send Message →';
-      btn.style.opacity='1';
-      setTimeout(()=>{if(status.textContent)status.className='form-status';status.textContent='';},6000);
-    });
+      })
+      .catch(function () {
+        status.textContent = 'The message could not be sent. Please email me directly instead.';
+        status.className = 'status err';
+      })
+      .finally(function () { send.disabled = false; send.textContent = 'Send message'; });
   });
-})();
-
-/* ==========================================
-   HERO TAG HOVER RIPPLE
-   ========================================== */
-document.querySelectorAll('.hero-tag').forEach(tag=>{
-  tag.addEventListener('mouseenter',function(){
-    this.style.transition='all .3s ease';
-  });
-});
-
-/* ==========================================
-   PARALLAX ORBS ON SCROLL
-   ========================================== */
-(function(){
-  const orbs=document.querySelectorAll('.orb');
-  window.addEventListener('scroll',()=>{
-    const y=window.scrollY;
-    orbs.forEach((orb,i)=>{
-      const speed=.03*(i+1);
-      orb.style.transform=`translateY(${y*speed}px)`;
-    });
-  },{passive:true});
 })();
 </script>
 </body>
