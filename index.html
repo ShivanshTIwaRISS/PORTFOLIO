@@ -3,472 +3,692 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Shivansh Tiwari | Full-Stack Developer</title>
-<meta name="description" content="Shivansh Tiwari is a full-stack developer building web platforms, desktop applications and AI systems with React, Node.js, Python and MySQL."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700&display=swap" rel="stylesheet"/>
+<title>Shivansh Tiwari — Full Stack Developer Portfolio</title>
+<meta name="description" content="Shivansh Tiwari — Aspiring Full-Stack Developer skilled in React.js, Node.js, Express.js, MySQL, and Python."/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Scroll Progress -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- Mobile menu -->
+<!-- Background Effects -->
+<div class="noise-overlay"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<canvas id="particles-canvas"></canvas>
+
+<!-- Mobile Nav Overlay -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="#about">About</a>
+  <a href="#hero" class="active">Home</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
-  <a href="#open-source">Open Source</a>
   <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
 </div>
 
-<!-- Navigation -->
-<header class="navbar" id="navbar">
-  <div class="container nav-inner">
-    <a href="#top" class="brand" aria-label="Shivansh Tiwari, home">
-      <span class="brand-mark">ST</span>
-      <span class="brand-name">Shivansh Tiwari</span>
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">ST</div>
+      <div class="nav-brand-text">
+        <h1>Shivansh Tiwari</h1>
+        <span>Full-Stack Developer</span>
+      </div>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a class="nav-link" href="#about">About</a>
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link active" href="#hero">Home</a>
       <a class="nav-link" href="#projects">Projects</a>
       <a class="nav-link" href="#skills">Skills</a>
-      <a class="nav-link" href="#open-source">Open Source</a>
       <a class="nav-link" href="#experience">Experience</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-primary btn-sm" href="#contact">Contact</a>
+      <a class="nav-link" href="#contact">Contact</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
+    <div class="nav-actions">
+      <a class="nav-cta ghost" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.77c-1.1-.75.09-.74.09-.74a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.95A4.66 4.66 0 0 1 6.16 7.4a4.34 4.34 0 0 1 .12-3.21s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.34 4.34 0 0 1 .12 3.21 4.66 4.66 0 0 1 1.25 3.24c0 4.62-2.81 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 0Z"/></svg>
+        GitHub
+      </a>
+      <a class="nav-cta primary" href="mailto:shivansh.tiwari2024@nst.rishihood.edu.in">Let's Talk →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
     </button>
   </div>
-</header>
-
-<main id="top">
+</nav>
 
 <!-- HERO -->
-<section class="hero" id="about">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="status-dot"></span>Available for internships and freelance work</p>
-      <h1 class="hero-title">Shivansh Tiwari<span class="hero-sub">Full-stack developer building reliable products, from interface to infrastructure.</span></h1>
-      <p class="hero-text">
-        I design and ship web platforms, desktop applications and AI-driven systems using React, Node.js, Python and MySQL.
-        I care about clean architecture, performance, and software that holds up beyond the demo.
-      </p>
+<section class="hero" id="hero">
+  <div class="main-container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Open for Opportunities
+        </div>
+        <h2 class="hero-greeting">
+          Hi 👋, I'm<br/><span class="gradient-text">Shivansh Tiwari</span>
+        </h2>
+        <div class="hero-title-line">
+          I build <span class="typed-text" id="typedText">beautiful web apps</span>
+        </div>
+        <p class="hero-description">
+          Aspiring Full Stack Developer skilled in React.js, Node.js, Express.js, MySQL, and Python.
+          Passionate about building fast, accessible & beautiful user experiences.
+        </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View projects</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <!-- Stats Row -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="400">0+</div>
+            <div class="hero-stat-label">LC Problems</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="1400">0+</div>
+            <div class="hero-stat-label">LC Rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="1000">0+</div>
+            <div class="hero-stat-label">CF Rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="6">0+</div>
+            <div class="hero-stat-label">Projects</div>
+          </div>
+        </div>
+
+        <div class="hero-tags">
+          <span class="hero-tag">React.js</span>
+          <span class="hero-tag">Node.js</span>
+          <span class="hero-tag">MySQL</span>
+          <span class="hero-tag">Python</span>
+          <span class="hero-tag">TypeScript</span>
+          <span class="hero-tag">UI/UX</span>
+        </div>
+
+        <div class="hero-buttons">
+          <button class="btn-magnetic primary-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            <span class="btn-text">Let's Connect</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <a class="btn-magnetic secondary-btn" href="#projects">
+            <span class="btn-text">View Projects</span>
+            <span class="btn-icon">↓</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a class="social-link" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.77c-1.1-.75.09-.74.09-.74a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.95A4.66 4.66 0 0 1 6.16 7.4a4.34 4.34 0 0 1 .12-3.21s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.34 4.34 0 0 1 .12 3.21 4.66 4.66 0 0 1 1.25 3.24c0 4.62-2.81 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 0Z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5H9.49V9h3.4v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32ZM5.34 7.43a2.06 2.06 0 1 1 0-4.11 2.06 2.06 0 0 1 0 4.11ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0Z"/></svg>
+          </a>
+          <a class="social-link" href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener" title="LeetCode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.283 5.283 0 0 0 .443 1.255 5.43 5.43 0 0 0 .787 1.145l3.563 3.534a5.568 5.568 0 0 0 3.93 1.556 5.45 5.45 0 0 0 2.91-.807l-.786-.89a4.373 4.373 0 0 1-2.124.56 4.422 4.422 0 0 1-3.13-1.28l-3.563-3.534a4.288 4.288 0 0 1-1.036-1.573 4.158 4.158 0 0 1-.29-1.982 4.393 4.393 0 0 1 1.062-2.46l3.854-4.126 5.406-5.788a.252.252 0 0 1 .176-.073.253.253 0 0 1 .178.074l3.7 3.89c.1.104.15.234.15.368a.524.524 0 0 1-.15.37l-5.443 5.702a.537.537 0 0 1-.376.155.525.525 0 0 1-.375-.156l-2.27-2.38a.5.5 0 0 1 0-.714l5.308-5.564-.788-.846-5.308 5.564a1.638 1.638 0 0 0 0 2.326l2.27 2.38a1.672 1.672 0 0 0 2.365 0l5.443-5.702c.326-.34.49-.773.49-1.208a1.66 1.66 0 0 0-.49-1.199l-3.7-3.89A1.376 1.376 0 0 0 13.483 0zm3.36 10.747h5.93a.697.697 0 0 1 0 1.395h-5.93a.697.697 0 0 1 0-1.395z"/></svg>
+          </a>
+          <a class="social-link" href="https://codeforces.com/profile/shivansh.tiwari0909" target="_blank" rel="noopener" title="Codeforces">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="3" width="5" height="18" fill="currentColor"/><rect x="9.5" y="7" width="5" height="14" fill="currentColor"/><rect x="17" y="11" width="5" height="10" fill="currentColor"/></svg>
+          </a>
+        </div>
       </div>
 
-      <ul class="social-row" aria-label="Profiles">
-        <li><a href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">LeetCode</a></li>
-        <li><a href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">Codeforces</a></li>
-      </ul>
-    </div>
-
-    <div class="hero-visual">
-      <div class="portrait">
-        <img src="image.png" alt="Portrait of Shivansh Tiwari" loading="eager"/>
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <div class="avatar-ring"></div>
+          <div class="avatar-ring-2"></div>
+          <div class="avatar-img-container">
+            <img src="image.png" alt="Shivansh Tiwari" loading="eager"/>
+          </div>
+          <div class="floating-badge fb-1">⚡ 400+ LC Problems</div>
+          <div class="floating-badge fb-2">🎯 1000+ CF Rating</div>
+          <div class="floating-badge fb-3">🚀 DSA & CP</div>
+        </div>
       </div>
-      <div class="portrait-caption">
-        <span class="mono">B.Tech, Data Science</span>
-        <span>Newton School of Technology</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="stats">
-      <div class="stat"><div class="stat-value"><span data-count="700">0</span>+</div><div class="stat-label">LeetCode problems solved</div></div>
-      <div class="stat"><div class="stat-value"><span data-count="1400">0</span>+</div><div class="stat-label">LeetCode contest rating</div></div>
-      <div class="stat"><div class="stat-value"><span data-count="1000">0</span>+</div><div class="stat-label">Codeforces rating</div></div>
-      <div class="stat"><div class="stat-value"><span data-count="11">0</span></div><div class="stat-label">Projects shipped</div></div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="section-label">Selected work</p>
-      <h2 class="section-title">Projects</h2>
-      <p class="section-sub">Production-style builds across AI, desktop, systems design and full-stack web.</p>
+<section class="section-wrapper" id="projects">
+  <div class="main-container">
+    <div class="section-header reveal">
+      <div class="section-label">// Portfolio</div>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle">A curated selection of my best work — live demos & source code included.</p>
+      <div class="section-divider"></div>
     </div>
-
-    <div class="filters reveal" role="tablist" aria-label="Filter projects">
-      <button class="filter active" data-filter="all" role="tab">All</button>
-      <button class="filter" data-filter="ai" role="tab">AI / ML</button>
-      <button class="filter" data-filter="fullstack" role="tab">Full-Stack</button>
-      <button class="filter" data-filter="desktop" role="tab">Desktop and CLI</button>
-      <button class="filter" data-filter="frontend" role="tab">Frontend</button>
-    </div>
-
-    <div class="projects-grid" id="projectsGrid">
-
-      <!-- CreditIQ -->
-      <article class="card project reveal" data-cat="ai">
-        <figure class="project-media"><img src="image10.png" alt="CreditIQ screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">CreditIQ</span></figure>
-        <div class="project-body">
-          <p class="project-kind">AI / ML</p>
-          <h3 class="project-title">CreditIQ: Agentic Risk Intelligence Platform</h3>
-          <p class="project-desc">A GenAI-powered credit risk platform that scores applicants and produces explainable risk assessments through an agentic workflow. Deployed on Streamlit.</p>
-          <ul class="tags"><li>Python</li><li>GenAI</li><li>Machine Learning</li><li>Streamlit</li></ul>
-          <div class="project-links">
-            <!-- Add your Streamlit URL below and remove the comment markers to show a Live button -->
-            <!-- <a class="btn btn-primary btn-sm" href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener">Live demo</a> -->
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Credit_Score_Capstone_Project_GenAI" target="_blank" rel="noopener">Source code</a>
+    <div class="projects-grid">
+      <article class="project-card reveal stagger-1">
+        <div class="project-card-image">
+          <img src="image6.png" alt="MediConnect"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://medi-connect-six-psi.vercel.app/" target="_blank">View Live ↗</a></div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">MediConnect: End-to-End Medical Management Web</h3>
+          <p class="project-card-desc">Developed a Full-Stack Healthcare Platform using the MERN stack to facilitate seamless online consultations and appointment scheduling between patients and doctors.</p>
+          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://medi-connect-six-psi.vercel.app/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank">Source Code</a>
           </div>
         </div>
       </article>
-
-      <!-- Parivahan Sahayak -->
-      <article class="card project reveal" data-cat="ai fullstack">
-        <figure class="project-media"><img src="image12.png" alt="Parivahan Sahayak screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">Parivahan Sahayak</span></figure>
-        <div class="project-body">
-          <p class="project-kind">AI application</p>
-          <h3 class="project-title">Parivahan Sahayak</h3>
-          <p class="project-desc">An AI assistant for transport and vehicle-related queries, delivering quick, conversational guidance through a clean web interface.</p>
-          <ul class="tags"><li>AI</li><li>Web App</li><li>Vercel</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://parivahansahayak-hu4o8umpp-shivanshtiwariss-projects.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Parivahan_Sahayak" target="_blank" rel="noopener">Source code</a>
+      <article class="project-card reveal stagger-2">
+        <div class="project-card-image">
+          <img src="image7.png" alt="OS E-Commerce Platform"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://caps-003.vercel.app/" target="_blank">View Live ↗</a></div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">OS – Full-Stack E-Commerce Platform</h3>
+          <p class="project-card-desc">Developed a Scalable E-commerce Architecture using React.js and Node.js, featuring a dynamic product catalog, multi-category filtering, and optimized search functionality for 500+ products.</p>
+          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://caps-003.vercel.app/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank">Source Code</a>
           </div>
         </div>
       </article>
-
-      <!-- VEYRA -->
-      <article class="card project reveal" data-cat="desktop">
-        <figure class="project-media"><img src="image8.png" alt="VEYRA screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">VEYRA</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Desktop application</p>
-          <h3 class="project-title">VEYRA: Athena Examination and Proctoring Platform</h3>
-          <p class="project-desc">An Electron desktop application for conducting secure online examinations with a controlled exam environment and proctoring support.</p>
-          <ul class="tags"><li>Electron</li><li>JavaScript</li><li>Desktop</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Athena_clone_AD" target="_blank" rel="noopener">Source code</a>
+      <article class="project-card reveal stagger-3">
+        <div class="project-card-image">
+          <img src="image3.png" alt="Pixnet Social Media Platform"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://pixnet-social-lu8v.vercel.app/" target="_blank">View Live ↗</a></div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Pixnet — Social Media Platform</h3>
+          <p class="project-card-desc">Reels, Stories, trending feed, and a polished UI—built with React for the frontend and Node for APIs.</p>
+          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://pixnet-social-lu8v.vercel.app/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank">Source Code</a>
           </div>
         </div>
       </article>
-
-      <!-- meetO -->
-      <article class="card project reveal" data-cat="fullstack">
-        <figure class="project-media"><img src="image11.png" alt="meetO screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">meetO</span></figure>
-        <div class="project-body">
-          <p class="project-kind">System design</p>
-          <h3 class="project-title">meetO: Social Media Platform</h3>
-          <p class="project-desc">A full-stack social platform built from the ground up around system design principles, OOP concepts, design patterns and SOLID principles.</p>
-          <ul class="tags"><li>System Design</li><li>OOP</li><li>Design Patterns</li><li>SOLID</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/meetO" target="_blank" rel="noopener">Source code</a>
+      <article class="project-card reveal stagger-4">
+        <div class="project-card-image">
+          <img src="image2.png" alt="Online Storefront"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://capstone-sem-2.vercel.app/" target="_blank">View Live ↗</a></div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Online Storefront</h3>
+          <p class="project-card-desc">Responsive storefront with smooth cart & checkout experience and polished responsive UI.</p>
+          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">CSS</span><span class="project-tag">REST API</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank">Source Code</a>
           </div>
         </div>
       </article>
-
-      <!-- CLI Music Player -->
-      <article class="card project reveal" data-cat="desktop">
-        <figure class="project-media"><img src="image9.png" alt="CLI Music Player screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">CLI Music Player</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Terminal application</p>
-          <h3 class="project-title">CLI Music Player</h3>
-          <p class="project-desc">A keyboard-driven music player that runs entirely in the terminal, with playback controls and library navigation.</p>
-          <ul class="tags"><li>CLI</li><li>Terminal UI</li><li>Systems</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/AD-E" target="_blank" rel="noopener">Source code</a>
+      <article class="project-card reveal stagger-5">
+        <div class="project-card-image">
+          <img src="image5.png" alt="Quiz Game"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank">View Live ↗</a></div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">The Quiz Game</h3>
+          <p class="project-card-desc">A fun and interactive quiz game built with HTML, CSS, and JavaScript featuring score tracking.</p>
+          <div class="project-card-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank">Source Code</a>
           </div>
         </div>
       </article>
-
-      <!-- MediConnect -->
-      <article class="card project reveal" data-cat="fullstack">
-        <figure class="project-media"><img src="image6.png" alt="MediConnect screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">MediConnect</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Full-stack web</p>
-          <h3 class="project-title">MediConnect: Medical Management Platform</h3>
-          <p class="project-desc">A MERN healthcare platform that enables online consultations and appointment scheduling between patients and doctors.</p>
-          <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://medi-connect-six-psi.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank" rel="noopener">Source code</a>
-          </div>
+      <article class="project-card reveal stagger-6">
+        <div class="project-card-image">
+          <img src="image4.png" alt="TaskMate"/>
+          <div class="project-card-overlay"><a class="project-btn live" href="https://making-one.vercel.app/" target="_blank">View Live ↗</a></div>
         </div>
-      </article>
-
-      <!-- OS E-Commerce -->
-      <article class="card project reveal" data-cat="fullstack">
-        <figure class="project-media"><img src="image7.png" alt="OS e-commerce screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">OS Commerce</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Full-stack web</p>
-          <h3 class="project-title">OS: E-Commerce Platform</h3>
-          <p class="project-desc">A scalable e-commerce architecture with a dynamic catalog, multi-category filtering and optimized search across 500+ products.</p>
-          <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://caps-003.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank" rel="noopener">Source code</a>
+        <div class="project-card-body">
+          <h3 class="project-card-title">TaskMate — Smart Task Manager</h3>
+          <p class="project-card-desc">Beautiful task manager built with React. Features: search, CRUD, persistence, smooth loaders, and accessible UI.</p>
+          <div class="project-card-tags"><span class="project-tag">React</span><span class="project-tag">LocalStorage</span><span class="project-tag">CSS Animations</span></div>
+          <div class="project-card-actions">
+            <a class="project-btn live" href="https://making-one.vercel.app/" target="_blank">Live Demo ↗</a>
+            <a class="project-btn code" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank">Source Code</a>
           </div>
-        </div>
-      </article>
-
-      <!-- Pixnet -->
-      <article class="card project reveal" data-cat="fullstack">
-        <figure class="project-media"><img src="image3.png" alt="Pixnet screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">Pixnet</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Full-stack web</p>
-          <h3 class="project-title">Pixnet: Social Media Platform</h3>
-          <p class="project-desc">Reels, stories and a trending feed with a polished interface, built on a React frontend and Node.js APIs.</p>
-          <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://pixnet-social-lu8v.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Online Storefront -->
-      <article class="card project reveal" data-cat="frontend">
-        <figure class="project-media"><img src="image2.png" alt="Online Storefront screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">Storefront</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Frontend</p>
-          <h3 class="project-title">Online Storefront</h3>
-          <p class="project-desc">A responsive storefront with a smooth cart and checkout experience.</p>
-          <ul class="tags"><li>React</li><li>CSS</li><li>REST API</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- TaskMate -->
-      <article class="card project reveal" data-cat="frontend">
-        <figure class="project-media"><img src="image4.png" alt="TaskMate screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">TaskMate</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Frontend</p>
-          <h3 class="project-title">TaskMate: Task Manager</h3>
-          <p class="project-desc">A task manager with search, full CRUD, persistence, loading states and an accessible interface.</p>
-          <ul class="tags"><li>React</li><li>LocalStorage</li><li>CSS Animations</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://making-one.vercel.app/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Quiz Game -->
-      <article class="card project reveal" data-cat="frontend">
-        <figure class="project-media"><img src="image5.png" alt="Quiz Game screenshot" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"/><span class="media-fallback">Quiz Game</span></figure>
-        <div class="project-body">
-          <p class="project-kind">Frontend</p>
-          <h3 class="project-title">The Quiz Game</h3>
-          <p class="project-desc">An interactive quiz game with score tracking, written in plain HTML, CSS and JavaScript.</p>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section section-alt" id="skills">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="section-label">Toolkit</p>
-      <h2 class="section-title">Skills</h2>
-      <p class="section-sub">The technologies and fundamentals I work with day to day.</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="card skill-group reveal">
-        <h3>Frontend</h3>
-        <ul class="skill-list">
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" width="20" height="20"/>React.js</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" width="20" height="20"/>TypeScript</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="20" height="20"/>JavaScript</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="20" height="20"/>HTML5</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="20" height="20"/>CSS3</li>
-        </ul>
-      </div>
-      <div class="card skill-group reveal">
-        <h3>Backend and Data</h3>
-        <ul class="skill-list">
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" width="20" height="20"/>Node.js</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" width="20" height="20"/>Express.js</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" width="20" height="20"/>MySQL</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" width="20" height="20"/>MongoDB</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="20" height="20"/>Python</li>
-        </ul>
-      </div>
-      <div class="card skill-group reveal">
-        <h3>AI and Desktop</h3>
-        <ul class="skill-list">
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" alt="" width="20" height="20"/>Electron</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="" width="20" height="20"/>Streamlit</li>
-          <li><span class="dot"></span>Generative AI and agents</li>
-          <li><span class="dot"></span>Machine learning fundamentals</li>
-        </ul>
-      </div>
-      <div class="card skill-group reveal">
-        <h3>Engineering Fundamentals</h3>
-        <ul class="skill-list">
-          <li><span class="dot"></span>Data structures and algorithms</li>
-          <li><span class="dot"></span>System design</li>
-          <li><span class="dot"></span>OOP, design patterns, SOLID</li>
-          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="20" height="20"/>Git and GitHub</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPETITIVE PROGRAMMING + OPEN SOURCE -->
-<section class="section" id="open-source">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="section-label">Community and problem solving</p>
-      <h2 class="section-title">Open Source and Competitive Programming</h2>
-      <p class="section-sub">Contributing to real codebases and sharpening fundamentals through contests.</p>
-    </div>
-
-    <div class="two-col">
-      <article class="card feature reveal">
-        <p class="project-kind">Open source</p>
-        <h3 class="feature-title">Merged pull request</h3>
-        <p class="feature-text">
-          Contributed code to an open-source project and had the pull request reviewed and merged by the maintainers,
-          working through code review, project conventions and collaborative Git workflows.
-        </p>
-        <!-- Replace the href with the URL of your merged PR, and edit the text above with the project name and what you changed -->
-        <a class="btn btn-ghost btn-sm" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">View contributions</a>
-      </article>
-
-      <article class="card feature reveal">
-        <p class="project-kind">Competitive programming</p>
-        <h3 class="feature-title">700+ problems solved</h3>
-        <p class="feature-text">
-          Consistent practice across data structures and algorithms, with regular contest participation on LeetCode and Codeforces.
-        </p>
-        <div class="feature-links">
-          <a class="btn btn-ghost btn-sm" href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">LeetCode profile</a>
-          <a class="btn btn-ghost btn-sm" href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">Codeforces profile</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section section-alt" id="experience">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="section-label">Background</p>
-      <h2 class="section-title">Experience and Education</h2>
+<!-- SKILLS -->
+<section class="section-wrapper" id="skills">
+  <div class="main-container">
+    <div class="section-header reveal">
+      <div class="section-label">// Tech Stack</div>
+      <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
+      <p class="section-subtitle">Technologies I use to bring ideas to life.</p>
+      <div class="section-divider"></div>
     </div>
-
-    <div class="two-col">
-      <div class="timeline reveal">
-        <h3 class="timeline-title">Experience</h3>
-        <div class="entry">
-          <p class="entry-date mono">May 2025 to Jul 2025</p>
-          <h4>Full Stack Developer Intern, Deltecs InfoTech</h4>
-          <p>Built and optimized web modules with React and Node.js, improved load time by roughly 20%, and designed RESTful APIs backed by MySQL.</p>
-        </div>
-        <div class="entry">
-          <p class="entry-date mono">2024 to Present</p>
-          <h4>Freelance Frontend Developer</h4>
-          <p>Interface polish, single-page application builds and third-party API integrations for small clients and college projects.</p>
-        </div>
-        <div class="entry">
-          <p class="entry-date mono">Ongoing</p>
-          <h4>Hackathons and Open Source</h4>
-          <p>Participant in Smart India Hackathon and HackaPirate. Merged pull request in an open-source project.</p>
-        </div>
+    <div class="skills-container">
+      <div class="skill-card reveal stagger-1">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
+        <div class="skill-name">React.js</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="92"></div></div>
       </div>
+      <div class="skill-card reveal stagger-2">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
+        <div class="skill-name">Node.js</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="84"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-3">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="90"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-4">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
+        <div class="skill-name">MySQL</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="80"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-1">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="75"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-2">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+        <div class="skill-name">TypeScript</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="65"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-3">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>
+        <div class="skill-name">HTML5</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="95"></div></div>
+      </div>
+      <div class="skill-card reveal stagger-4">
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/>
+        <div class="skill-name">CSS3</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-target="90"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="timeline reveal">
-        <h3 class="timeline-title">Education</h3>
-        <div class="entry">
-          <p class="entry-date mono">2024 to 2028 (pursuing)</p>
-          <h4>B.Tech, Data Science, Newton School of Technology</h4>
-          <p>Coursework in data structures, machine learning fundamentals, databases and software engineering practices.</p>
-        </div>
-        <div class="entry">
-          <p class="entry-date mono">2022 to 2023</p>
-          <h4>Intermediate (XII), Swami Harsewanand Public School</h4>
-        </div>
-        <div class="entry">
-          <p class="entry-date mono">2020 to 2021</p>
-          <h4>Matriculation (X), Swami Harsewanand Public School</h4>
-        </div>
+<!-- EXPERIENCE & EDUCATION -->
+<section class="section-wrapper" id="experience">
+  <div class="main-container">
+    <div class="section-header reveal">
+      <div class="section-label">// Journey</div>
+      <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+      <p class="section-subtitle">My professional journey and academic background.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline-grid">
+      <div class="timeline-block reveal-left">
+        <div class="timeline-block-title">💼 Experience</div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Full Stack Developer Intern — Deltecs InfoTech</h4><div class="timeline-date">May 2025 — Jul 2025</div><p>Built & optimized web modules with React & Node. Improved load time by ~20% and designed RESTful APIs with MySQL.</p></div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Freelance Frontend Developer</h4><div class="timeline-date">2024 — Present</div><p>UI polish, SPA builds, and integrating third-party APIs for small clients & college projects.</p></div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Hackathons & Open Source</h4><div class="timeline-date">Ongoing</div><p>Participated in Smart India Hackathon, HackaPirate. Contributed to open-source UI components.</p></div>
+      </div>
+      <div class="timeline-block reveal-right">
+        <div class="timeline-block-title">🎓 Education</div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>B.Tech (Data Science) — Newton School of Technology</h4><div class="timeline-date">2024 — 2028 (Pursuing)</div><p>Coursework in data structures, ML fundamentals, databases, and software engineering practices.</p></div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Intermediate (XII) — Swami Harsewanand Public School</h4><div class="timeline-date">2022 — 2023</div></div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Matriculation (X) — Swami Harsewanand Public School</h4><div class="timeline-date">2020 — 2021</div></div>
+        <div class="timeline-entry"><div class="timeline-dot"></div><h4>Competitive Programming</h4><div class="timeline-date">Ongoing</div><p>Active on LeetCode & Codeforces, 200+ problems solved, contest participant.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Let's work together</h2>
-      <p class="section-sub">Have a project, internship or opportunity in mind? Send a message and I will reply promptly.</p>
+<section class="section-wrapper" id="contact">
+  <div class="main-container">
+    <div class="section-header reveal">
+      <div class="section-label">// Connect</div>
+      <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+      <p class="section-subtitle">Have a project in mind? Let's build something extraordinary.</p>
+      <div class="section-divider"></div>
     </div>
-
-    <div class="contact-grid">
-      <div class="card contact-info reveal">
-        <div class="contact-row"><span class="contact-label">Email</span><a href="mailto:shivanshtiwari630692@gmail.com">shivanshtiwari630692@gmail.com</a></div>
-        <div class="contact-row"><span class="contact-label">Location</span><span>Delhi, India</span></div>
-        <div class="contact-row"><span class="contact-label">Availability</span><span>Internships and freelance projects</span></div>
-        <div class="contact-row"><span class="contact-label">Profiles</span>
-          <span class="inline-links">
-            <a href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">LeetCode</a>
-            <a href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">Codeforces</a>
-          </span>
+    <div class="contact-layout">
+      <div class="contact-info reveal-left">
+        <h3>Get in Touch</h3>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-detail-label">Email</div><div class="contact-detail-value">shivanshtiwari630692@gmail.com</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-detail-label">Location</div><div class="contact-detail-value">Delhi, India</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="var(--accent-2)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-detail-label">Availability</div><div class="contact-detail-value">Open for Internships & Freelance</div></div>
         </div>
       </div>
-
-      <div class="card contact-form-wrap reveal">
+      <div class="contact-form-wrapper reveal-right">
         <form id="contactForm" action="https://formsubmit.co/shivanshtiwari630692@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New portfolio contact"/>
-          <input type="hidden" name="_captcha" value="false"/>
-          <input type="hidden" name="_template" value="table"/>
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+          <!-- Formsubmit.co config: no captcha, nice template, spam honeypot -->
+          <input type="hidden" name="_subject" value="🚀 New Portfolio Contact!">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
           <div class="form-row">
-            <div class="form-group"><label for="name">Name</label><input class="form-input" id="name" name="name" placeholder="Your name" required/></div>
-            <div class="form-group"><label for="email">Email</label><input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
+            <div class="form-group"><label for="name">Your Name</label><input class="form-input" id="name" name="name" placeholder="Your name" required/></div>
+            <div class="form-group"><label for="email">Your Email</label><input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
           </div>
-          <div class="form-group"><label for="message">Message</label><textarea class="form-input" id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea></div>
-          <button class="btn btn-primary btn-block" id="submitBtn" type="submit">Send message</button>
-          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <div class="form-group"><label for="message">Message</label><textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea></div>
+          <button class="submit-btn" id="submitBtn" type="submit"><span>Send Message →</span></button>
+          <div id="formStatus" class="form-status"></div>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-</main>
-
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>&copy; <span id="year">2026</span> Shivansh Tiwari. All rights reserved.</p>
-    <a href="#top">Back to top</a>
+  <div class="main-container">
+    <p class="footer-text">© 2026 Shivansh Tiwari — Built with <span class="heart">♥</span> and lots of ☕</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- SCRIPTS -->
+<script>
+/* ==========================================
+   CUSTOM CURSOR
+   ========================================== */
+(function(){
+  const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+  if(!dot||!ring)return;
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx-4+'px';dot.style.top=my-4+'px'});
+  (function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx-20+'px';ring.style.top=ry-20+'px';requestAnimationFrame(loop)})();
+  document.querySelectorAll('a,button,.project-card,.skill-card,.social-link,.nav-cta,.btn-magnetic,.hamburger').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ring.classList.add('hover');dot.style.transform='scale(1.5)'});
+    el.addEventListener('mouseleave',()=>{ring.classList.remove('hover');dot.style.transform='scale(1)'});
+  });
+})();
+
+/* ==========================================
+   SCROLL PROGRESS
+   ========================================== */
+(function(){
+  const bar=document.getElementById('scrollProgress');
+  if(!bar)return;
+  window.addEventListener('scroll',()=>{
+    const p=document.documentElement.scrollTop/(document.documentElement.scrollHeight-document.documentElement.clientHeight);
+    bar.style.transform=`scaleX(${p})`;
+  },{passive:true});
+})();
+
+/* ==========================================
+   NAV SCROLL EFFECT
+   ========================================== */
+(function(){
+  const nav=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+})();
+
+/* ==========================================
+   MOBILE NAV MENU
+   ========================================== */
+(function(){
+  const hamburger=document.getElementById('hamburger');
+  const mobileNav=document.getElementById('mobileNav');
+  if(!hamburger||!mobileNav)return;
+  let isOpen=false;
+  hamburger.addEventListener('click',()=>{
+    isOpen=!isOpen;
+    hamburger.classList.toggle('active',isOpen);
+    mobileNav.classList.toggle('open',isOpen);
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      isOpen=false;
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+})();
+
+/* ==========================================
+   TYPED TEXT
+   ========================================== */
+(function(){
+  const el=document.getElementById('typedText');if(!el)return;
+  const phrases=["beautiful web apps","React & Node projects","fast & accessible UIs","clean, scalable code","pixel-perfect designs"];
+  let pi=0,ci=0,del=false;
+  (function type(){
+    const c=phrases[pi];
+    del?ci--:ci++;
+    el.textContent=c.substring(0,ci);
+    let s=del?30:60+Math.random()*40;
+    if(!del&&ci===c.length){s=2000;del=true}else if(del&&ci===0){del=false;pi=(pi+1)%phrases.length;s=500}
+    setTimeout(type,s);
+  })();
+})();
+
+/* ==========================================
+   COUNTER ANIMATION (Hero Stats)
+   ========================================== */
+(function(){
+  const stats=document.querySelectorAll('.hero-stat-value[data-count]');
+  let animated=false;
+  function animateCounters(){
+    if(animated)return;animated=true;
+    stats.forEach(el=>{
+      const target=parseInt(el.getAttribute('data-count'));
+      const duration=1800;
+      const start=performance.now();
+      function update(now){
+        const elapsed=now-start;
+        const progress=Math.min(elapsed/duration,1);
+        const eased=1-Math.pow(1-progress,3); // easeOutCubic
+        const current=Math.round(eased*target);
+        el.textContent=current+'+';
+        if(progress<1)requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    });
+  }
+  // Trigger after hero animations complete
+  setTimeout(animateCounters,1200);
+})();
+
+/* ==========================================
+   SCROLL REVEAL
+   ========================================== */
+(function(){
+  const els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>obs.observe(e));
+})();
+
+/* ==========================================
+   SKILL BARS
+   ========================================== */
+(function(){
+  const fills=document.querySelectorAll('.skill-bar-fill');
+  const sec=document.getElementById('skills');if(!sec)return;
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){fills.forEach(f=>f.style.width=f.getAttribute('data-target')+'%');obs.disconnect()}});
+  },{threshold:.25});
+  obs.observe(sec);
+})();
+
+/* ==========================================
+   3D TILT CARDS
+   ========================================== */
+(function(){
+  document.querySelectorAll('.project-card').forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width;
+      const y=(e.clientY-r.top)/r.height;
+      card.style.transform=`perspective(1000px) rotateX(${(y-.5)*-8}deg) rotateY(${(x-.5)*8}deg) translateY(-8px)`;
+    });
+    card.addEventListener('mouseleave',()=>card.style.transform='');
+  });
+})();
+
+/* ==========================================
+   MAGNETIC BUTTONS
+   ========================================== */
+(function(){
+  document.querySelectorAll('.btn-magnetic,.social-link,.nav-logo').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      const x=e.clientX-r.left-r.width/2;
+      const y=e.clientY-r.top-r.height/2;
+      btn.style.transform=`translate(${x*.2}px,${y*.2}px)`;
+    });
+    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+  });
+})();
+
+/* ==========================================
+   NAV ACTIVE STATE
+   ========================================== */
+(function(){
+  const links=[...document.querySelectorAll('.nav-link'),...document.querySelectorAll('.mobile-nav a')];
+  const pairs=[];
+  document.querySelectorAll('.nav-link').forEach(l=>{const s=document.querySelector(l.getAttribute('href'));if(s)pairs.push({href:l.getAttribute('href'),section:s})});
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY+200;
+    for(let i=pairs.length-1;i>=0;i--){
+      if(y>=pairs[i].section.offsetTop){
+        links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===pairs[i].href));
+        break;
+      }
+    }
+  },{passive:true});
+})();
+
+/* ==========================================
+   PARTICLES
+   ========================================== */
+(function(){
+  const c=document.getElementById('particles-canvas');if(!c)return;
+  const ctx=c.getContext('2d');let W,H;
+  function resize(){W=c.width=innerWidth;H=c.height=innerHeight}resize();addEventListener('resize',resize);
+  const N=Math.min(70,Math.floor(innerWidth*innerHeight/20000)),ps=[];
+  class P{
+    constructor(){this.i()}
+    i(){this.x=Math.random()*W;this.y=Math.random()*H;this.s=Math.random()*2+.5;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.o=Math.random()*.25+.05;this.h=Math.random()*60+250}
+    u(){this.x+=this.vx;this.y+=this.vy;if(this.x<-20||this.x>W+20||this.y<-20||this.y>H+20)this.i()}
+    d(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},70%,70%,${this.o})`;ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.s*4,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},70%,70%,${this.o*.12})`;ctx.fill()}
+  }
+  for(let i=0;i<N;i++)ps.push(new P);
+  (function loop(){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p=>{p.u();p.d()});
+    for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){
+      const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<120){ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(168,85,247,${.05*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke()}
+    }
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ==========================================
+   SMOOTH SCROLL
+   ========================================== */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+/* ==========================================
+   PARALLAX BADGES
+   ========================================== */
+(function(){
+  const badges=document.querySelectorAll('.floating-badge');
+  window.addEventListener('mousemove',e=>{
+    const x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;
+    badges.forEach((b,i)=>{const n=(i+1)*8;b.style.transform=`translate(${x*n}px,${y*n}px)`});
+  });
+})();
+
+/* ==========================================
+   CONTACT FORM (AJAX via Formsubmit.co)
+   ========================================== */
+(function(){
+  const form=document.getElementById('contactForm');
+  const btn=document.getElementById('submitBtn');
+  const status=document.getElementById('formStatus');
+  if(!form)return;
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value.trim();
+    const email=document.getElementById('email').value.trim();
+    const message=document.getElementById('message').value.trim();
+    if(!name||!email||!message)return;
+
+    // Show loading state
+    btn.disabled=true;
+    btn.querySelector('span').textContent='Sending...';
+    btn.style.opacity='0.5';
+    status.textContent='';
+    status.className='form-status';
+
+    const formData=new FormData(form);
+
+    fetch(form.action,{
+      method:'POST',
+      body:formData,
+      headers:{'Accept':'application/json'}
+    }).then(response=>{
+      if(response.ok){
+        status.textContent='✅ Message sent successfully! I\'ll get back to you soon.';
+        status.className='form-status success';
+        form.reset();
+      } else {
+        throw new Error('Form failed');
+      }
+    }).catch(error=>{
+      status.textContent='❌ Failed to send message (Make sure you are running via local server/localhost, not file://).';
+      status.className='form-status error';
+    }).finally(()=>{
+      btn.disabled=false;
+      btn.querySelector('span').textContent='Send Message →';
+      btn.style.opacity='1';
+      setTimeout(()=>{if(status.textContent)status.className='form-status';status.textContent='';},6000);
+    });
+  });
+})();
+
+/* ==========================================
+   HERO TAG HOVER RIPPLE
+   ========================================== */
+document.querySelectorAll('.hero-tag').forEach(tag=>{
+  tag.addEventListener('mouseenter',function(){
+    this.style.transition='all .3s ease';
+  });
+});
+
+/* ==========================================
+   PARALLAX ORBS ON SCROLL
+   ========================================== */
+(function(){
+  const orbs=document.querySelectorAll('.orb');
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    orbs.forEach((orb,i)=>{
+      const speed=.03*(i+1);
+      orb.style.transform=`translateY(${y*speed}px)`;
+    });
+  },{passive:true});
+})();
+</script>
 </body>
 </html>
