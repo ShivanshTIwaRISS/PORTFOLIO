@@ -1,29 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#ece8de"/>
+<meta name="theme-color" content="#0b0b0c"/>
 <title>Shivansh Tiwari | Full-Stack Developer</title>
 <meta name="description" content="Shivansh Tiwari is a full-stack developer building web platforms, desktop software and AI systems with React, Node.js, Python and MySQL."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script>document.documentElement.className='js';</script>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="site-header">
+<div class="curtain" aria-hidden="true"><div class="curtain-in"><span>Shivansh Tiwari</span></div></div>
+<div class="progress" id="progress"></div>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#toolkit">Toolkit</a>
+  <a href="#journey">Journey</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<header class="site-header" id="header">
   <div class="wrap bar">
-    <a href="#top" class="mark" aria-label="Shivansh Tiwari, home">Shivansh Tiwari</a>
-    <nav class="nav" id="nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#practice">Practice</a>
-      <a href="#background">Background</a>
-      <a href="#contact">Contact</a>
+    <a href="#top" class="mark" aria-label="Shivansh Tiwari, home"><i></i>Shivansh Tiwari</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about"><b>01</b>About</a>
+      <a href="#work"><b>02</b>Work</a>
+      <a href="#toolkit"><b>03</b>Toolkit</a>
+      <a href="#journey"><b>04</b>Journey</a>
+      <a href="#contact"><b>05</b>Contact</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <div class="bar-right">
+      <span class="avail"><i></i>Open to work</span>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -32,36 +47,77 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-grid">
+    <div class="hero-top fade-up" style="--i:0">
+      <p class="label">Portfolio / 2026</p>
+      <p class="label">Delhi, India</p>
+    </div>
+
+    <div class="hero-main">
       <div>
-        <p class="eyebrow">Portfolio, 2026</p>
-        <h1>Shivansh<br/><em>Tiwari</em></h1>
-        <p class="lede">Full-stack developer. I build web platforms, desktop software and AI systems, from the interface to the database.</p>
-        <p class="sub">Currently studying Data Science at Newton School of Technology. Open to internships and freelance work, with a focus on clean architecture and products that hold up after the demo.</p>
-        <div class="hero-actions">
-          <a class="btn solid" href="#work">See the work</a>
-          <a class="btn" href="#contact">Get in touch</a>
+        <h1 class="hero-name">
+          <span class="line"><span style="--i:0">Shivansh</span></span>
+          <span class="line outline"><span style="--i:1">Tiwari</span></span>
+        </h1>
+        <div class="hero-copy">
+          <p class="lede fade-up" style="--i:2">Full-stack developer building <em>web platforms, desktop software and AI systems</em> from interface to database.</p>
+          <div class="hero-copy-r fade-up" style="--i:3">
+            <p>Data Science student at Newton School of Technology. I work with React, Node.js, Python and MySQL, and I care about clean architecture and software that keeps working after the demo.</p>
+            <div class="hero-actions">
+              <a class="btn solid" href="#work">See the work</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <aside class="hero-side">
-        <div class="media portrait">
-          <img src="image.png" alt="Portrait of Shivansh Tiwari" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/>
-          <span class="label">Shivansh Tiwari</span>
+      <div class="portrait-col fade-up" style="--i:1">
+        <div class="portrait" id="portrait">
+          <span class="portrait-tag">Fig. 01</span>
+          <div class="portrait-frame"></div>
+          <div class="media" style="position:absolute;inset:0;aspect-ratio:auto;z-index:1">
+            <img src="image.png" alt="Portrait of Shivansh Tiwari" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/>
+            <span class="ph">Shivansh Tiwari</span>
+          </div>
         </div>
-        <dl class="facts">
-          <div><dt>Based in</dt><dd>Delhi, India</dd></div>
-          <div><dt>Studying</dt><dd>B.Tech, Data Science</dd></div>
-          <div><dt>Status</dt><dd>Open to work</dd></div>
-        </dl>
-      </aside>
+      </div>
     </div>
 
-    <div class="stats">
-      <div class="stat"><b>700+</b><span>LeetCode problems solved</span></div>
-      <div class="stat"><b>1400+</b><span>LeetCode contest rating</span></div>
-      <div class="stat"><b>1000+</b><span>Codeforces rating</span></div>
-      <div class="stat"><b>11</b><span>Projects built</span></div>
+    <div class="stats" id="stats">
+      <div class="stat rv"><b><span data-count="700">700</span><sup>+</sup></b><span class="label">LeetCode problems solved</span></div>
+      <div class="stat rv" style="--d:.08s"><b><span data-count="1400">1400</span><sup>+</sup></b><span class="label">LeetCode contest rating</span></div>
+      <div class="stat rv" style="--d:.16s"><b><span data-count="1000">1000</span><sup>+</sup></b><span class="label">Codeforces rating</span></div>
+      <div class="stat rv" style="--d:.24s"><b><span data-count="11">11</span></b><span class="label">Projects built</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-sec" aria-hidden="true">
+  <div class="marquee">
+    <span>React</span><span class="o">Node.js</span><span>Python</span><span class="o">MySQL</span><span>TypeScript</span><span class="o">Electron</span><span>MongoDB</span><span class="o">Generative AI</span>
+    <span>React</span><span class="o">Node.js</span><span>Python</span><span class="o">MySQL</span><span>TypeScript</span><span class="o">Electron</span><span>MongoDB</span><span class="o">Generative AI</span>
+  </div>
+  <div class="marquee rev">
+    <span class="o">System Design</span><span>Express</span><span class="o">Streamlit</span><span>Algorithms</span><span class="o">REST APIs</span><span>SOLID</span><span class="o">Design Patterns</span><span>Git</span>
+    <span class="o">System Design</span><span>Express</span><span class="o">Streamlit</span><span>Algorithms</span><span class="o">REST APIs</span><span>SOLID</span><span class="o">Design Patterns</span><span>Git</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="shead">
+      <div class="shead-top"><p class="label"><b>01</b>About</p></div>
+      <div class="rule"></div>
+    </header>
+    <div class="about">
+      <p class="statement words">I am a full-stack developer and Data Science student who ships web platforms, desktop software and AI systems. I like clear architecture, fast interfaces and code that other people can pick up and extend.</p>
+      <dl class="facts rv">
+        <div><dt class="label">Based in</dt><dd>Delhi, India</dd></div>
+        <div><dt class="label">Studying</dt><dd>B.Tech, Data Science</dd></div>
+        <div><dt class="label">Experience</dt><dd>Full Stack Intern, Deltecs InfoTech</dd></div>
+        <div><dt class="label">Status</dt><dd>Open to internships and freelance</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -69,240 +125,220 @@
 <!-- WORK -->
 <section class="section" id="work">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Index of work</p>
-      <h2>Selected <em>projects</em></h2>
-      <p>Every project below links to its source. Where a deployment exists, you can open a live preview without leaving this page.</p>
-    </div>
+    <header class="shead">
+      <div class="shead-top"><p class="label"><b>02</b>Work</p><p class="label">11 projects</p></div>
+      <h2 class="rv">Selected <em>projects</em></h2>
+      <p class="sub rv">Four flagship builds first, then the full archive. Hover a row in the archive to preview it, or open any live demo without leaving the page.</p>
+      <div class="rule" style="margin-top:44px"></div>
+    </header>
 
-    <div class="filters" role="tablist" aria-label="Filter projects">
-      <button class="filter active" data-filter="all" role="tab">All</button>
-      <button class="filter" data-filter="ai" role="tab">AI and ML</button>
-      <button class="filter" data-filter="fullstack" role="tab">Full-stack</button>
-      <button class="filter" data-filter="desktop" role="tab">Desktop and CLI</button>
-      <button class="filter" data-filter="frontend" role="tab">Frontend</button>
-    </div>
-
-    <div class="work">
-
-      <article class="row" data-cat="ai">
-        <div class="row-no"></div>
-        <div class="media"><img src="image10.png" alt="CreditIQ interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">CreditIQ</span></div>
-        <div>
-          <p class="eyebrow row-kind">AI and ML<span class="tag-selected">Selected</span></p>
-          <h3>CreditIQ: Agentic Risk Intelligence Platform</h3>
-          <p class="desc">A GenAI-powered credit risk platform that scores applicants and produces explainable risk assessments through an agentic workflow. Deployed on Streamlit.</p>
-          <p class="stack">Python, GenAI, Machine Learning, Streamlit</p>
-        </div>
-        <div class="row-actions">
-          <!-- When you have the Streamlit URL, add these two buttons:
+    <!-- Featured 1 -->
+    <article class="feat">
+      <div class="feat-media rv">
+        <span class="feat-num">01</span>
+        <div class="media parallax"><img src="image10.png" alt="CreditIQ interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="ph">CreditIQ</span></div>
+      </div>
+      <div class="feat-body rv" style="--d:.1s">
+        <p class="label"><em>AI and ML</em><span>Streamlit deployment</span></p>
+        <h3>CreditIQ: Agentic Risk Intelligence Platform</h3>
+        <p class="desc">A GenAI-powered credit risk platform that scores applicants and produces explainable risk assessments through an agentic workflow.</p>
+        <ul class="tags"><li>Python</li><li>GenAI</li><li>Machine Learning</li><li>Streamlit</li></ul>
+        <div class="actions">
+          <!-- When you have the Streamlit URL, add:
           <button class="btn solid" data-preview="YOUR_STREAMLIT_URL" data-title="CreditIQ">Live preview</button>
           <a class="btn" href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener">Open site</a> -->
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Credit_Score_Capstone_Project_GenAI" target="_blank" rel="noopener">Source</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Credit_Score_Capstone_Project_GenAI" target="_blank" rel="noopener">Source code</a>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="row" data-cat="ai fullstack">
-        <div class="row-no"></div>
-        <div class="media"><img src="image12.png" alt="Parivahan Sahayak interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Parivahan Sahayak</span></div>
-        <div>
-          <p class="eyebrow row-kind">AI application<span class="tag-selected">Selected</span></p>
-          <h3>Parivahan Sahayak</h3>
-          <p class="desc">An AI assistant for transport and vehicle-related queries, giving quick conversational guidance through a clean web interface.</p>
-          <p class="stack">AI, Web app, Vercel</p>
-        </div>
-        <div class="row-actions">
+    <!-- Featured 2 -->
+    <article class="feat">
+      <div class="feat-media rv">
+        <span class="feat-num">02</span>
+        <div class="media parallax"><img src="image12.png" alt="Parivahan Sahayak interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="ph">Parivahan Sahayak</span></div>
+      </div>
+      <div class="feat-body rv" style="--d:.1s">
+        <p class="label"><em>AI application</em><span>Deployed on Vercel</span></p>
+        <h3>Parivahan Sahayak</h3>
+        <p class="desc">An AI assistant for transport and vehicle-related queries, giving quick conversational guidance through a clean web interface.</p>
+        <ul class="tags"><li>AI</li><li>Web app</li><li>Vercel</li></ul>
+        <div class="actions">
           <button class="btn solid" data-preview="https://parivahansahayak-hu4o8umpp-shivanshtiwariss-projects.vercel.app/" data-title="Parivahan Sahayak">Live preview</button>
           <a class="btn" href="https://parivahansahayak-hu4o8umpp-shivanshtiwariss-projects.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Parivahan_Sahayak" target="_blank" rel="noopener">Source</a>
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Parivahan_Sahayak" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Featured 3 -->
+    <article class="feat">
+      <div class="feat-media rv">
+        <span class="feat-num">03</span>
+        <div class="media parallax"><img src="image8.png" alt="VEYRA interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="ph">VEYRA</span></div>
+      </div>
+      <div class="feat-body rv" style="--d:.1s">
+        <p class="label"><em>Desktop application</em><span>Electron</span></p>
+        <h3>VEYRA: Athena Examination and Proctoring Platform</h3>
+        <p class="desc">An Electron desktop application for running secure online examinations, with a controlled exam environment and proctoring support.</p>
+        <ul class="tags"><li>Electron</li><li>JavaScript</li><li>Desktop</li></ul>
+        <div class="actions">
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Athena_clone_AD" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Featured 4 -->
+    <article class="feat">
+      <div class="feat-media rv">
+        <span class="feat-num">04</span>
+        <div class="media parallax"><img src="image11.png" alt="meetO interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="ph">meetO</span></div>
+      </div>
+      <div class="feat-body rv" style="--d:.1s">
+        <p class="label"><em>System design</em><span>Full-stack</span></p>
+        <h3>meetO: Social Media Platform</h3>
+        <p class="desc">A full-stack social platform built from the ground up around system design principles, OOP concepts, design patterns and SOLID principles.</p>
+        <ul class="tags"><li>System Design</li><li>OOP</li><li>Design Patterns</li><li>SOLID</li></ul>
+        <div class="actions">
+          <a class="btn" href="https://github.com/ShivanshTIwaRISS/meetO" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Archive -->
+    <div class="archive-head">
+      <h3 class="rv">More work <span>/ archive</span></h3>
+      <div class="filters rv" role="tablist" aria-label="Filter archive">
+        <button class="filter active" data-filter="all" role="tab">All</button>
+        <button class="filter" data-filter="fullstack" role="tab">Full-stack</button>
+        <button class="filter" data-filter="frontend" role="tab">Frontend</button>
+        <button class="filter" data-filter="desktop" role="tab">Desktop and CLI</button>
+      </div>
+    </div>
+
+    <div class="alist">
+      <article class="arow rv" data-cat="desktop" data-img="image9.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>CLI Music Player</h4><p>A keyboard-driven music player that runs entirely in the terminal.</p></div>
+        <span class="a-kind">Terminal application</span>
+        <span class="a-stack">CLI, Terminal UI, Systems</span>
+        <div class="a-links"><a class="btn sm" href="https://github.com/ShivanshTIwaRISS/AD-E" target="_blank" rel="noopener">Source</a></div>
+      </article>
+
+      <article class="arow rv" data-cat="fullstack" data-img="image6.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>MediConnect</h4><p>MERN healthcare platform for online consultations and appointment scheduling.</p></div>
+        <span class="a-kind">Full-stack web</span>
+        <span class="a-stack">React, Node.js, Express, MongoDB</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://medi-connect-six-psi.vercel.app/" data-title="MediConnect">Preview</button>
+          <a class="btn sm" href="https://medi-connect-six-psi.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
 
-      <article class="row" data-cat="desktop">
-        <div class="row-no"></div>
-        <div class="media"><img src="image8.png" alt="VEYRA interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">VEYRA</span></div>
-        <div>
-          <p class="eyebrow row-kind">Desktop application</p>
-          <h3>VEYRA: Athena Examination and Proctoring Platform</h3>
-          <p class="desc">An Electron desktop application for running secure online examinations, with a controlled exam environment and proctoring support.</p>
-          <p class="stack">Electron, JavaScript, Desktop</p>
-        </div>
-        <div class="row-actions">
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Athena_clone_AD" target="_blank" rel="noopener">Source</a>
+      <article class="arow rv" data-cat="fullstack" data-img="image7.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>OS E-Commerce</h4><p>Scalable catalog with multi-category filtering and optimized search across 500+ products.</p></div>
+        <span class="a-kind">Full-stack web</span>
+        <span class="a-stack">React, Node.js, Express, MongoDB</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://caps-003.vercel.app/" data-title="OS E-Commerce">Preview</button>
+          <a class="btn sm" href="https://caps-003.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
 
-      <article class="row" data-cat="fullstack">
-        <div class="row-no"></div>
-        <div class="media"><img src="image11.png" alt="meetO interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">meetO</span></div>
-        <div>
-          <p class="eyebrow row-kind">System design</p>
-          <h3>meetO: Social Media Platform</h3>
-          <p class="desc">A full-stack social platform built from the ground up around system design principles, OOP concepts, design patterns and SOLID principles.</p>
-          <p class="stack">System design, OOP, Design patterns, SOLID</p>
-        </div>
-        <div class="row-actions">
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/meetO" target="_blank" rel="noopener">Source</a>
+      <article class="arow rv" data-cat="fullstack" data-img="image3.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>Pixnet</h4><p>Social platform with reels, stories and a trending feed.</p></div>
+        <span class="a-kind">Full-stack web</span>
+        <span class="a-stack">React, Node.js, Express, MongoDB</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://pixnet-social-lu8v.vercel.app/" data-title="Pixnet">Preview</button>
+          <a class="btn sm" href="https://pixnet-social-lu8v.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
 
-      <article class="row" data-cat="desktop">
-        <div class="row-no"></div>
-        <div class="media"><img src="image9.png" alt="CLI Music Player in a terminal" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">CLI Music Player</span></div>
-        <div>
-          <p class="eyebrow row-kind">Terminal application</p>
-          <h3>CLI Music Player</h3>
-          <p class="desc">A keyboard-driven music player that runs entirely in the terminal, with playback controls and library navigation.</p>
-          <p class="stack">CLI, Terminal UI, Systems</p>
-        </div>
-        <div class="row-actions">
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/AD-E" target="_blank" rel="noopener">Source</a>
+      <article class="arow rv" data-cat="frontend" data-img="image2.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>Online Storefront</h4><p>Responsive storefront with a smooth cart and checkout flow.</p></div>
+        <span class="a-kind">Frontend</span>
+        <span class="a-stack">React, CSS, REST API</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://capstone-sem-2-rdkg.vercel.app/" data-title="Online Storefront">Preview</button>
+          <a class="btn sm" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
 
-      <article class="row" data-cat="fullstack">
-        <div class="row-no"></div>
-        <div class="media"><img src="image6.png" alt="MediConnect interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">MediConnect</span></div>
-        <div>
-          <p class="eyebrow row-kind">Full-stack web</p>
-          <h3>MediConnect: Medical Management Platform</h3>
-          <p class="desc">A MERN healthcare platform for online consultations and appointment scheduling between patients and doctors.</p>
-          <p class="stack">React, Node.js, Express, MongoDB</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://medi-connect-six-psi.vercel.app/" data-title="MediConnect">Live preview</button>
-          <a class="btn" href="https://medi-connect-six-psi.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/MediConnect" target="_blank" rel="noopener">Source</a>
+      <article class="arow rv" data-cat="frontend" data-img="image4.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>TaskMate</h4><p>Task manager with search, full CRUD, persistence and an accessible interface.</p></div>
+        <span class="a-kind">Frontend</span>
+        <span class="a-stack">React, LocalStorage, CSS</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://making-one.vercel.app/" data-title="TaskMate">Preview</button>
+          <a class="btn sm" href="https://making-one.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
 
-      <article class="row" data-cat="fullstack">
-        <div class="row-no"></div>
-        <div class="media"><img src="image7.png" alt="OS e-commerce interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">OS Commerce</span></div>
-        <div>
-          <p class="eyebrow row-kind">Full-stack web</p>
-          <h3>OS: E-Commerce Platform</h3>
-          <p class="desc">A scalable e-commerce architecture with a dynamic catalog, multi-category filtering and optimized search across 500+ products.</p>
-          <p class="stack">React, Node.js, Express, MongoDB</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://caps-003.vercel.app/" data-title="OS E-Commerce">Live preview</button>
-          <a class="btn" href="https://caps-003.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Caps-003" target="_blank" rel="noopener">Source</a>
+      <article class="arow rv" data-cat="frontend" data-img="image5.png">
+        <span class="a-no"></span>
+        <div class="a-title"><h4>The Quiz Game</h4><p>Interactive quiz with score tracking in plain HTML, CSS and JavaScript.</p></div>
+        <span class="a-kind">Frontend</span>
+        <span class="a-stack">HTML, CSS, JavaScript</span>
+        <div class="a-links">
+          <button class="btn sm solid" data-preview="https://shivanshtiwariss.github.io/MY-QUIZ/" data-title="The Quiz Game">Preview</button>
+          <a class="btn sm" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank" rel="noopener">Live</a>
+          <a class="btn sm" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank" rel="noopener">Source</a>
         </div>
       </article>
-
-      <article class="row" data-cat="fullstack">
-        <div class="row-no"></div>
-        <div class="media"><img src="image3.png" alt="Pixnet interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Pixnet</span></div>
-        <div>
-          <p class="eyebrow row-kind">Full-stack web</p>
-          <h3>Pixnet: Social Media Platform</h3>
-          <p class="desc">Reels, stories and a trending feed, built on a React frontend with Node.js APIs.</p>
-          <p class="stack">React, Node.js, Express, MongoDB</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://pixnet-social-lu8v.vercel.app/" data-title="Pixnet">Live preview</button>
-          <a class="btn" href="https://pixnet-social-lu8v.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Pixnet_Social" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
-      <article class="row" data-cat="frontend">
-        <div class="row-no"></div>
-        <div class="media"><img src="image2.png" alt="Online Storefront interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">Online Storefront</span></div>
-        <div>
-          <p class="eyebrow row-kind">Frontend</p>
-          <h3>Online Storefront</h3>
-          <p class="desc">A responsive storefront with a smooth cart and checkout flow.</p>
-          <p class="stack">React, CSS, REST API</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://capstone-sem-2-rdkg.vercel.app/" data-title="Online Storefront">Live preview</button>
-          <a class="btn" href="https://capstone-sem-2-rdkg.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/CAPSTONE_SEM_2" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
-      <article class="row" data-cat="frontend">
-        <div class="row-no"></div>
-        <div class="media"><img src="image4.png" alt="TaskMate interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">TaskMate</span></div>
-        <div>
-          <p class="eyebrow row-kind">Frontend</p>
-          <h3>TaskMate: Task Manager</h3>
-          <p class="desc">A task manager with search, full CRUD, persistence, loading states and an accessible interface.</p>
-          <p class="stack">React, LocalStorage, CSS</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://making-one.vercel.app/" data-title="TaskMate">Live preview</button>
-          <a class="btn" href="https://making-one.vercel.app/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/Making-one" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
-      <article class="row" data-cat="frontend">
-        <div class="row-no"></div>
-        <div class="media"><img src="image5.png" alt="Quiz Game interface" loading="lazy" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('failed')"/><span class="label">The Quiz Game</span></div>
-        <div>
-          <p class="eyebrow row-kind">Frontend</p>
-          <h3>The Quiz Game</h3>
-          <p class="desc">An interactive quiz game with score tracking, written in plain HTML, CSS and JavaScript.</p>
-          <p class="stack">HTML, CSS, JavaScript</p>
-        </div>
-        <div class="row-actions">
-          <button class="btn solid" data-preview="https://shivanshtiwariss.github.io/MY-QUIZ/" data-title="The Quiz Game">Live preview</button>
-          <a class="btn" href="https://shivanshtiwariss.github.io/MY-QUIZ/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="https://github.com/ShivanshTIwaRISS/MY-QUIZ" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section class="section" id="capabilities">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Toolkit</p>
-      <h2>What I <em>work with</em></h2>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row"><dt>Languages</dt><dd>JavaScript, TypeScript, Python, SQL, HTML, CSS</dd></div>
-      <div class="ledger-row"><dt>Frontend</dt><dd>React.js, responsive layout, accessible interfaces</dd></div>
-      <div class="ledger-row"><dt>Backend</dt><dd>Node.js, Express.js, REST API design</dd></div>
-      <div class="ledger-row"><dt>Data</dt><dd>MySQL, MongoDB</dd></div>
-      <div class="ledger-row"><dt>AI and ML</dt><dd>Generative AI, agentic workflows, machine learning fundamentals, Streamlit</dd></div>
-      <div class="ledger-row"><dt>Desktop and CLI</dt><dd>Electron, terminal interfaces</dd></div>
-      <div class="ledger-row"><dt>Engineering</dt><dd>Data structures and algorithms, system design, OOP, design patterns, SOLID, Git and GitHub</dd></div>
-    </dl>
-  </div>
-</section>
+<div class="peek" id="peek" aria-hidden="true"><img alt="" src=""/></div>
 
-<!-- PRACTICE -->
-<section class="section" id="practice">
+<!-- TOOLKIT -->
+<section class="section" id="toolkit">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Community and problem solving</p>
-      <h2>Open source and <em>contests</em></h2>
+    <header class="shead">
+      <div class="shead-top"><p class="label"><b>03</b>Toolkit</p></div>
+      <h2 class="rv">What I <em>build with</em></h2>
+      <div class="rule" style="margin-top:44px"></div>
+    </header>
+    <div class="kit">
+      <div class="kit-cell rv"><span class="kit-n">/ 01</span><h3>Languages</h3><ul><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li></ul></div>
+      <div class="kit-cell rv" style="--d:.08s"><span class="kit-n">/ 02</span><h3>Frontend</h3><ul><li>React.js</li><li>Responsive layout</li><li>Accessible interfaces</li><li>Motion and interaction</li></ul></div>
+      <div class="kit-cell rv"><span class="kit-n">/ 03</span><h3>Backend and data</h3><ul><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>MySQL</li><li>MongoDB</li></ul></div>
+      <div class="kit-cell rv" style="--d:.08s"><span class="kit-n">/ 04</span><h3>AI and ML</h3><ul><li>Generative AI</li><li>Agentic workflows</li><li>Machine learning fundamentals</li><li>Streamlit</li></ul></div>
+      <div class="kit-cell rv"><span class="kit-n">/ 05</span><h3>Desktop and CLI</h3><ul><li>Electron</li><li>Terminal interfaces</li><li>Cross-platform apps</li></ul></div>
+      <div class="kit-cell rv" style="--d:.08s"><span class="kit-n">/ 06</span><h3>Engineering</h3><ul><li>Data structures</li><li>Algorithms</li><li>System design</li><li>OOP</li><li>Design patterns</li><li>SOLID</li><li>Git and GitHub</li></ul></div>
     </div>
-    <div class="split">
-      <article>
-        <p class="eyebrow">Open source</p>
-        <div class="big">Pull request merged</div>
+
+    <div class="shead" style="margin:130px 0 40px">
+      <div class="shead-top"><p class="label">Community and problem solving</p></div>
+      <h2 class="rv">Open source and <em>contests</em></h2>
+    </div>
+    <div class="duo">
+      <article class="panel rv">
+        <p class="label">Open source</p>
+        <h3>1<sup>PR</sup> merged</h3>
         <p class="copy">I contributed code to an open-source project and had the pull request reviewed and merged by the maintainers. It meant working through code review, following project conventions and collaborating over Git.</p>
         <!-- Replace the paragraph above with the project name and what you changed, and set the link below to your merged PR. -->
-        <div class="links"><a class="btn" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">View contributions</a></div>
+        <div class="actions"><a class="btn" href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">View contributions</a></div>
       </article>
-      <article>
-        <p class="eyebrow">Competitive programming</p>
-        <div class="big">700+ solved</div>
+      <article class="panel rv" style="--d:.1s">
+        <p class="label">Competitive programming</p>
+        <h3><span data-count="700">700</span><sup>+</sup> solved</h3>
         <div class="mini">
-          <div><b>1400+</b><span>LeetCode rating</span></div>
-          <div><b>1000+</b><span>Codeforces rating</span></div>
+          <div><b><span data-count="1400">1400</span>+</b><span class="label">LeetCode rating</span></div>
+          <div><b><span data-count="1000">1000</span>+</b><span class="label">Codeforces rating</span></div>
         </div>
-        <p class="copy">Steady practice across data structures and algorithms, with regular contest participation on both platforms.</p>
-        <div class="links">
+        <div class="actions">
           <a class="btn" href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">LeetCode</a>
           <a class="btn" href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">Codeforces</a>
         </div>
@@ -311,46 +347,47 @@
   </div>
 </section>
 
-<!-- BACKGROUND -->
-<section class="section" id="background">
+<!-- JOURNEY -->
+<section class="section" id="journey">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Background</p>
-      <h2>Experience and <em>education</em></h2>
-    </div>
-    <div class="two">
+    <header class="shead">
+      <div class="shead-top"><p class="label"><b>04</b>Journey</p></div>
+      <h2 class="rv">Experience and <em>education</em></h2>
+      <div class="rule" style="margin-top:44px"></div>
+    </header>
+
+    <div class="jblock">
+      <h3 class="rv">Experience</h3>
       <div>
-        <h3>Experience</h3>
-        <div class="log">
-          <div class="log-row">
-            <p class="log-date">May 2025 to Jul 2025</p>
-            <div><h4>Full Stack Developer Intern, Deltecs InfoTech</h4><p>Built and optimized web modules with React and Node.js, cut load time by roughly 20%, and designed RESTful APIs backed by MySQL.</p></div>
-          </div>
-          <div class="log-row">
-            <p class="log-date">2024 to present</p>
-            <div><h4>Freelance Frontend Developer</h4><p>Interface polish, single-page application builds and third-party API integrations for small clients and college projects.</p></div>
-          </div>
-          <div class="log-row">
-            <p class="log-date">Ongoing</p>
-            <div><h4>Hackathons and open source</h4><p>Participant in Smart India Hackathon and HackaPirate, plus a merged pull request in an open-source project.</p></div>
-          </div>
+        <div class="jrow rv">
+          <p class="jdate label">May 2025 to Jul 2025</p>
+          <div><h4>Full Stack Developer Intern, Deltecs InfoTech</h4><p>Built and optimized web modules with React and Node.js, cut load time by roughly 20%, and designed RESTful APIs backed by MySQL.</p></div>
+        </div>
+        <div class="jrow rv">
+          <p class="jdate label">2024 to present</p>
+          <div><h4>Freelance Frontend Developer</h4><p>Interface polish, single-page application builds and third-party API integrations for small clients and college projects.</p></div>
+        </div>
+        <div class="jrow rv">
+          <p class="jdate label">Ongoing</p>
+          <div><h4>Hackathons and open source</h4><p>Participant in Smart India Hackathon and HackaPirate, plus a merged pull request in an open-source project.</p></div>
         </div>
       </div>
+    </div>
+
+    <div class="jblock">
+      <h3 class="rv">Education</h3>
       <div>
-        <h3>Education</h3>
-        <div class="log">
-          <div class="log-row">
-            <p class="log-date">2024 to 2028, ongoing</p>
-            <div><h4>B.Tech, Data Science, Newton School of Technology</h4><p>Coursework in data structures, machine learning fundamentals, databases and software engineering practice.</p></div>
-          </div>
-          <div class="log-row">
-            <p class="log-date">2022 to 2023</p>
-            <div><h4>Intermediate (XII), Swami Harsewanand Public School</h4></div>
-          </div>
-          <div class="log-row">
-            <p class="log-date">2020 to 2021</p>
-            <div><h4>Matriculation (X), Swami Harsewanand Public School</h4></div>
-          </div>
+        <div class="jrow rv">
+          <p class="jdate label">2024 to 2028, ongoing</p>
+          <div><h4>B.Tech, Data Science, Newton School of Technology</h4><p>Coursework in data structures, machine learning fundamentals, databases and software engineering practice.</p></div>
+        </div>
+        <div class="jrow rv">
+          <p class="jdate label">2022 to 2023</p>
+          <div><h4>Intermediate (XII), Swami Harsewanand Public School</h4></div>
+        </div>
+        <div class="jrow rv">
+          <p class="jdate label">2020 to 2021</p>
+          <div><h4>Matriculation (X), Swami Harsewanand Public School</h4></div>
         </div>
       </div>
     </div>
@@ -362,47 +399,48 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
+    <p class="label"><span style="color:var(--accent)">05</span>&nbsp;&nbsp;Contact</p>
+    <h2 class="contact-big rv">Let us <span class="o">build</span><br/>something <em>great.</em></h2>
+
     <div class="contact-grid">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Let us build <em>something</em> together.</h2>
-        <p class="copy">If you have an internship, a freelance project or a product that needs a developer, write to me. I reply to every message.</p>
+      <div class="rv">
+        <p class="contact-copy">Have an internship, a freelance project or a product that needs a developer? Write to me. I reply to every message.</p>
         <a class="mail" href="mailto:shivanshtiwari630692@gmail.com">shivanshtiwari630692@gmail.com</a>
-        <dl class="contact-list">
-          <div><dt>Location</dt><dd>Delhi, India</dd></div>
-          <div><dt>Availability</dt><dd>Internships and freelance</dd></div>
-          <div><dt>GitHub</dt><dd><a href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">ShivanshTIwaRISS</a></dd></div>
-          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener">shivansh-tiwari</a></dd></div>
-          <div><dt>LeetCode</dt><dd><a href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">TourCoder0905</a></dd></div>
-          <div><dt>Codeforces</dt><dd><a href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">shivanshtiwari630692</a></dd></div>
+        <dl class="clist">
+          <div><dt class="label">Location</dt><dd>Delhi, India</dd></div>
+          <div><dt class="label">Availability</dt><dd>Internships and freelance</dd></div>
+          <div><dt class="label">GitHub</dt><dd><a href="https://github.com/ShivanshTIwaRISS" target="_blank" rel="noopener">ShivanshTIwaRISS</a></dd></div>
+          <div><dt class="label">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shivansh-tiwari-b83aa8324" target="_blank" rel="noopener">shivansh-tiwari</a></dd></div>
+          <div><dt class="label">LeetCode</dt><dd><a href="https://leetcode.com/u/TourCoder0905/" target="_blank" rel="noopener">TourCoder0905</a></dd></div>
+          <div><dt class="label">Codeforces</dt><dd><a href="https://codeforces.com/profile/shivanshtiwari630692" target="_blank" rel="noopener">shivanshtiwari630692</a></dd></div>
         </dl>
       </div>
 
-      <form id="contactForm" action="https://formsubmit.co/shivanshtiwari630692@gmail.com" method="POST">
+      <form id="contactForm" class="rv" style="--d:.1s" action="https://formsubmit.co/shivanshtiwari630692@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New portfolio message"/>
         <input type="hidden" name="_captcha" value="false"/>
         <input type="hidden" name="_template" value="table"/>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
         <div class="two-fields">
-          <div class="field"><label for="name">Name</label><input class="input" id="name" name="name" placeholder="Your name" required/></div>
-          <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
+          <div class="field"><label class="label" for="name">Name</label><input class="input" id="name" name="name" placeholder="Your name" required/></div>
+          <div class="field"><label class="label" for="email">Email</label><input class="input" id="email" name="email" type="email" placeholder="you@example.com" required/></div>
         </div>
-        <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" rows="6" placeholder="What are you working on?" required></textarea></div>
+        <div class="field"><label class="label" for="message">Message</label><textarea class="input" id="message" name="message" rows="5" placeholder="What are you working on?" required></textarea></div>
         <button class="send" id="sendBtn" type="submit">Send message</button>
         <p class="status" id="formStatus" role="status" aria-live="polite"></p>
         <p class="fine">By sending this form you agree to the <button type="button" data-open="privacy">Privacy Policy</button> and <button type="button" data-open="terms">Terms of Use</button>.</p>
       </form>
     </div>
-  </div>
 
-  <div class="foot">
-    <div class="wrap foot-in">
-      <span>&copy; <span id="year">2026</span> Shivansh Tiwari</span>
-      <nav aria-label="Footer">
-        <button type="button" data-open="privacy">Privacy</button>
-        <button type="button" data-open="terms">Terms</button>
-        <a href="#top">Back to top</a>
-      </nav>
+    <div class="foot">
+      <div class="foot-in label">
+        <span>&copy; <span id="year">2026</span> Shivansh Tiwari</span>
+        <nav aria-label="Footer">
+          <button type="button" class="label" data-open="privacy">Privacy</button>
+          <button type="button" class="label" data-open="terms">Terms</button>
+          <a href="#top">Back to top</a>
+        </nav>
+      </div>
     </div>
   </div>
 </section>
@@ -412,17 +450,17 @@
   <div class="dlg-head">
     <h3 id="previewTitle">Preview</h3>
     <div class="acts">
-      <a class="btn" id="previewOpen" href="#" target="_blank" rel="noopener">Open in new tab</a>
-      <button class="btn solid" type="button" data-close>Close</button>
+      <a class="btn sm" id="previewOpen" href="#" target="_blank" rel="noopener">Open in new tab</a>
+      <button class="btn sm solid" type="button" data-close>Close</button>
     </div>
   </div>
-  <div class="frame-wrap" id="frameWrap"><iframe id="previewFrame" title="Live project preview" loading="lazy"></iframe></div>
+  <div class="frame-wrap" id="frameWrap"><iframe id="previewFrame" title="Live project preview"></iframe></div>
   <p class="dlg-note">This is the deployed site, loaded live. If the preview stays blank, the site may block embedding, so use Open in new tab.</p>
 </dialog>
 
 <!-- PRIVACY -->
 <dialog id="privacy" class="legal" aria-label="Privacy Policy">
-  <div class="dlg-head"><h3>Privacy Policy</h3><button class="btn solid" type="button" data-close>Close</button></div>
+  <div class="dlg-head"><h3>Privacy Policy</h3><button class="btn sm solid" type="button" data-close>Close</button></div>
   <div class="legal-body">
     <h4>What I collect</h4>
     <p>The contact form collects the name, email address and message you type in. Nothing else is collected through this site.</p>
@@ -431,15 +469,15 @@
     <h4>Cookies and analytics</h4>
     <p>This site sets no cookies of its own and runs no analytics or advertising trackers.</p>
     <h4>Third parties</h4>
-    <p>Fonts are loaded from Google Fonts. Live previews load the deployed projects, and those sites, along with GitHub, LeetCode, Codeforces and LinkedIn, have their own policies.</p>
+    <p>Fonts load from Google Fonts. Live previews load the deployed projects, and those sites, along with GitHub, LeetCode, Codeforces and LinkedIn, have their own policies.</p>
     <h4>Your choices</h4>
-    <p>To have a message you sent deleted, email me at shivanshtiwari630692@gmail.com and I will remove it.</p>
+    <p>To have a message you sent deleted, email shivanshtiwari630692@gmail.com and I will remove it.</p>
   </div>
 </dialog>
 
 <!-- TERMS -->
 <dialog id="terms" class="legal" aria-label="Terms of Use">
-  <div class="dlg-head"><h3>Terms of Use</h3><button class="btn solid" type="button" data-close>Close</button></div>
+  <div class="dlg-head"><h3>Terms of Use</h3><button class="btn sm solid" type="button" data-close>Close</button></div>
   <div class="legal-body">
     <h4>Content</h4>
     <p>The text, design and layout of this portfolio are my own work. Please do not republish them as yours without permission.</p>
@@ -459,71 +497,181 @@
   'use strict';
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
   $('#year').textContent = new Date().getFullYear();
 
-  /* Images that finished loading before the handlers ran */
+  /* Images already loaded before handlers ran */
   $$('.media img').forEach(function (img) {
-    if (img.complete) {
-      img.parentNode.classList.add(img.naturalWidth > 0 ? 'loaded' : 'failed');
-    }
+    if (img.complete) img.parentNode.classList.add(img.naturalWidth > 0 ? 'loaded' : 'failed');
   });
 
-  /* Mobile menu */
-  var menuBtn = $('#menuBtn'), nav = $('#nav');
-  menuBtn.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? 'Close' : 'Menu';
-  });
-  $$('a', nav).forEach(function (a) {
-    a.addEventListener('click', function () {
-      nav.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.textContent = 'Menu';
+  /* ---------- Header, progress, active link ---------- */
+  var header = $('#header'), prog = $('#progress'), lastY = 0;
+  var links = $$('.nav a'), targets = links.map(function (l) { return $(l.getAttribute('href')); });
+  var menuBtn = $('#menuBtn'), mobile = $('#mobileNav');
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      var y = window.scrollY, d = document.documentElement;
+      var max = d.scrollHeight - d.clientHeight;
+      prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+      header.classList.toggle('scrolled', y > 40);
+      if (!mobile.classList.contains('open')) header.classList.toggle('hide', y > lastY && y > 320);
+      lastY = y;
+      var probe = y + 160, cur = -1;
+      targets.forEach(function (t, i) { if (t && t.offsetTop <= probe) cur = i; });
+      links.forEach(function (l, i) { l.classList.toggle('active', i === cur); });
+      wordsUpdate(); parallaxUpdate();
+      ticking = false;
     });
-  });
-
-  /* Active section in nav */
-  var links = $$('.nav a');
-  var targets = links.map(function (l) { return $(l.getAttribute('href')); });
-  function setActive() {
-    var y = window.scrollY + 140, cur = -1;
-    targets.forEach(function (t, i) { if (t && t.offsetTop <= y) cur = i; });
-    links.forEach(function (l, i) { l.classList.toggle('active', i === cur); });
   }
-  window.addEventListener('scroll', setActive, { passive: true });
-  setActive();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
 
-  /* Project filters */
-  var filters = $$('.filter'), rows = $$('.row');
+  /* ---------- Mobile menu ---------- */
+  function setMenu(open) {
+    mobile.classList.toggle('open', open);
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) header.classList.remove('hide');
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!mobile.classList.contains('open')); });
+  $$('a', mobile).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- Reveal on scroll (safety fallback included) ---------- */
+  var revealEls = $$('.rv, .rule, .jrow');
+  function showAll() { revealEls.forEach(function (el) { el.classList.add('in'); }); }
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+    setTimeout(showAll, 6000);
+  } else { showAll(); }
+
+  /* ---------- Counters ---------- */
+  function runCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (reduce) { el.textContent = target; return; }
+    var dur = 1800, start = performance.now();
+    el.textContent = '0';
+    (function tick(now) {
+      var p = Math.min((now - start) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * target);
+      if (p < 1) requestAnimationFrame(tick);
+    })(start);
+  }
+  if ('IntersectionObserver' in window) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { runCounter(e.target); co.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    $$('[data-count]').forEach(function (el) { co.observe(el); });
+  }
+
+  /* ---------- Word-by-word statement reveal ---------- */
+  var statements = $$('.words');
+  statements.forEach(function (p) {
+    var words = p.textContent.trim().split(/\s+/);
+    p.innerHTML = words.map(function (w) { return '<span class="w">' + w + '</span>'; }).join(' ');
+  });
+  function wordsUpdate() {
+    var vh = window.innerHeight;
+    statements.forEach(function (p) {
+      var spans = p.querySelectorAll('.w'), r = p.getBoundingClientRect();
+      var prog = (vh * 0.88 - r.top) / (r.height + vh * 0.35);
+      prog = Math.max(0, Math.min(1, prog));
+      var n = Math.round(prog * spans.length);
+      for (var i = 0; i < spans.length; i++) spans[i].classList.toggle('on', i < n);
+    });
+  }
+
+  /* ---------- Parallax on featured images ---------- */
+  var plx = $$('.parallax');
+  function parallaxUpdate() {
+    if (reduce) return;
+    var vh = window.innerHeight;
+    plx.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var off = ((r.top + r.height / 2) - vh / 2) / vh;
+      el.style.setProperty('--py', 'translateY(' + (off * -34).toFixed(1) + 'px)');
+    });
+  }
+
+  /* ---------- Portrait tilt ---------- */
+  var portrait = $('#portrait');
+  if (portrait && fine && !reduce) {
+    var col = portrait.parentNode;
+    col.addEventListener('mousemove', function (e) {
+      var r = col.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      portrait.style.transform = 'rotateY(' + (x * 8) + 'deg) rotateX(' + (-y * 8) + 'deg)';
+    });
+    col.addEventListener('mouseleave', function () { portrait.style.transform = ''; });
+  }
+
+  /* ---------- Archive filters ---------- */
+  var filters = $$('.filter'), rows = $$('.arow');
   filters.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var f = btn.getAttribute('data-filter');
       filters.forEach(function (b) { b.classList.toggle('active', b === btn); });
       rows.forEach(function (r) {
-        var cats = (r.getAttribute('data-cat') || '').split(' ');
-        r.classList.toggle('is-hidden', f !== 'all' && cats.indexOf(f) === -1);
+        var hide = f !== 'all' && r.getAttribute('data-cat').split(' ').indexOf(f) === -1;
+        r.classList.toggle('is-hidden', hide);
+        if (!hide) r.classList.add('in');
       });
     });
   });
 
-  /* Live preview dialog */
+  /* ---------- Hover preview that follows the cursor ---------- */
+  var peek = $('#peek'), peekImg = $('img', peek);
+  if (peek && fine) {
+    var tx = 0, ty = 0, cx = 0, cy = 0, active = false, raf = null;
+    function loop() {
+      cx += (tx - cx) * 0.16; cy += (ty - cy) * 0.16;
+      peek.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0) scale(' + (active ? 1 : 0.85) + ')';
+      raf = active || Math.abs(tx - cx) > 0.5 ? requestAnimationFrame(loop) : null;
+    }
+    rows.forEach(function (row) {
+      row.addEventListener('mouseenter', function (e) {
+        var src = row.getAttribute('data-img');
+        if (!src) return;
+        peekImg.onerror = function () { peek.classList.remove('on'); };
+        peekImg.src = src;
+        tx = cx = e.clientX + 28; ty = cy = e.clientY - 110;
+        active = true; peek.classList.add('on');
+        if (!raf) raf = requestAnimationFrame(loop);
+      });
+      row.addEventListener('mousemove', function (e) { tx = e.clientX + 28; ty = e.clientY - 110; });
+      row.addEventListener('mouseleave', function () { active = false; peek.classList.remove('on'); });
+    });
+  }
+
+  /* ---------- Dialogs ---------- */
   var preview = $('#preview'), frame = $('#previewFrame'), wrap = $('#frameWrap');
-  frame.addEventListener('load', function () { if (frame.src && frame.src !== 'about:blank') wrap.classList.add('ready'); });
+  frame.addEventListener('load', function () { if (frame.getAttribute('src') && frame.getAttribute('src') !== 'about:blank') wrap.classList.add('ready'); });
   $$('[data-preview]').forEach(function (b) {
     b.addEventListener('click', function () {
       var url = b.getAttribute('data-preview');
       $('#previewTitle').textContent = b.getAttribute('data-title') || 'Preview';
       $('#previewOpen').href = url;
       wrap.classList.remove('ready');
-      frame.src = url;
+      frame.setAttribute('src', url);
       preview.showModal();
     });
   });
-  preview.addEventListener('close', function () { frame.src = 'about:blank'; wrap.classList.remove('ready'); });
-
-  /* Generic dialogs (privacy, terms) */
+  preview.addEventListener('close', function () { frame.setAttribute('src', 'about:blank'); wrap.classList.remove('ready'); });
   $$('[data-open]').forEach(function (b) {
     b.addEventListener('click', function () { $('#' + b.getAttribute('data-open')).showModal(); });
   });
@@ -532,7 +680,7 @@
     $$('[data-close]', d).forEach(function (c) { c.addEventListener('click', function () { d.close(); }); });
   });
 
-  /* Contact form */
+  /* ---------- Contact form ---------- */
   var form = $('#contactForm'), send = $('#sendBtn'), status = $('#formStatus');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -542,8 +690,7 @@
       .then(function (res) {
         if (!res.ok) throw new Error('failed');
         status.textContent = 'Message sent. I will reply soon.';
-        status.className = 'status ok';
-        form.reset();
+        status.className = 'status ok'; form.reset();
       })
       .catch(function () {
         status.textContent = 'The message could not be sent. Please email me directly instead.';
@@ -551,6 +698,8 @@
       })
       .finally(function () { send.disabled = false; send.textContent = 'Send message'; });
   });
+
+  onScroll();
 })();
 </script>
 </body>
